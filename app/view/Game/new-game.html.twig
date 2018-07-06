@@ -1,0 +1,43 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Création du personnage</title>
+{% endblock %}
+
+{% block content %}
+    <div class="ml20p w70 pb20p transparentBg">
+        <h1 class="cinzel fs6 color1 ml20p mt20p">Création du personnage</h1>
+
+        {% if sessions.globalMessage != '' %}
+            <div class="bg_success border_success p20p w100 mt10p">
+                <p class="color1 fs1_4">{{ sessions.globalMessage }}</p>
+            </div>
+        {% endif %}
+
+        <form action="new-game" class="w50 mt20p center" method="POST">
+            <input type="hidden" name="ID_USER" value="{{ sessions.User }}">
+            <div class="mt20p">
+                <input type="text" id="GAM_PSEUDO" placeholder="Nom du personnage" name="GAM_PSEUDO" class="h35p w100 cinzel no_border pl20p">
+            </div>
+            <div class="mt20p">
+                <select id="GAM_RACE" name="GAM_RACE" class="h35p w100 cinzel no_border pl20p">
+                    <option value="">Sélectionnez la race du personnage</option>
+                    {% for race in races %}
+                        <option value="{{ race.ID_RACE }}">{{ race.RAC_LIBELLE }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mt20p">
+                <select id="GAM_CLASSE" name="GAM_CLASSE" class="h35p w100 cinzel no_border pl20p">
+                    <option value="">Sélectionnez la classe du personnage</option>
+                    {% for classe in classes %}
+                        <option value="{{ classe.ID_CLASSE }}">{{ classe.CLA_LIBELLE }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="mt20p">
+                <button class="no_border fs1_6 bg1 cinzel pointer pt5p pr10p pb5p pl10p" type="submit" value="create" name="creaPersonnage">Créer</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

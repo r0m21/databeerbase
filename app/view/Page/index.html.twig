@@ -1,0 +1,21 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Home</title>
+{% endblock %}
+
+{% block content %}
+    <div class="flex wrap jc_center">
+        <h1 class="cinzel fs6 color1 txt_center mt20p">My Custom RPG</h1>
+
+        {% if sessions.globalMessage != '' %}
+            <div class="bg_success border_success p20p w100 mt10p">
+                <p class="color1 fs14">{{ sessions.globalMessage }}</p>
+            </div>
+        {% endif %}
+
+        <div class="w216p h170p center mt100p menu_features">
+            
+        </div>
+    </div>
+{% endblock %}

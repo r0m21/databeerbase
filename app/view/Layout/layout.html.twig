@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="http://localhost/my-rpg/">
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+        
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <link rel="stylesheet" href="./assets/css/rpg-awesome.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>{% block title %}My RPG{% endblock %}</title>
+    </head>
+    <body class="mh100vh flex wrap itemsCenter fcolumn">
+        {% include 'Layout/nav.html.twig' %}
+
+        <main class="fgrow w100">
+            {% block content %}{% endblock %}
+        </main>
+
+        {% include 'Layout/footer.html.twig' %}
+    </body>
+</html>

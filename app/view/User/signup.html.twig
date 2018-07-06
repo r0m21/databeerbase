@@ -1,0 +1,37 @@
+{% extends 'Layout/layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} - Inscription</title>
+{% endblock %}
+
+{% block content %}
+    <div class="ml20p w70 pb20p transparentBg">
+        <h1 class="cinzel fs6 color1 ml20p mt20p">Inscription</h1>
+
+        {% if message|length > 0 and type != '' %}
+            <div class="bg_{{ type }} border_{{ type }} p20p w100 mt10p">
+                {% for error in message %}
+                    <p class="color1 fs1_4">{{ error }}</p>
+                {% endfor %}
+            </div>
+        {% endif %}
+        
+        <form action="signup" class="w50 mt20p center" method="POST">
+            <div class="mt20p">
+                <input type="text" placeholder="Login" id="login" name="login" class="h35p w100 cinzel no_border pl20p">
+            </div>
+            <div class="mt20p">
+                <input type="password" placeholder="Password" id="password" name="password" class="h35p w100 cinzel no_border pl20p">
+            </div>
+            <div class="mt20p">
+                <input type="email" placeholder="Email" id="email" name="email" class="h35p w100 cinzel no_border pl20p">
+            </div>
+            <div class="mt20p">
+                <button class="no_border fs1_6 bg1 cinzel pointer pt5p pr10p pb5p pl10p" type="submit" value="Inscription" name="submitSignup">S'inscrire</button>
+            </div>
+            <div class="mt20p">
+                <a href="login" class="cinzel fs1_4 color1 no_decoration">Se connecter</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
