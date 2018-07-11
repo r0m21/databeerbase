@@ -87,6 +87,7 @@
     <Folder Include="Ressources" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".htaccess" />
     <Content Include="assets\img\beers\affligem.png" />
     <Content Include="assets\img\beers\dadsroot.png" />
     <Content Include="assets\img\beers\dadsroot_diet.png" />
@@ -107,11 +108,13 @@
     <Content Include="assets\img\caroussel\pub_outdoor.jpg" />
     <Content Include="assets\img\icons\home.png" />
     <Content Include="assets\img\icons\question.png" />
+    <Content Include="assets\js\owl.carousel.js" />
     <Content Include="ChopeTaBierre.phpproj.user" />
     <Content Include="Ressources\beers-propre.csv" />
     <Content Include="Ressources\beers.xlsm" />
     <Content Include="Ressources\categories %28Enregistré automatiquement%29.xlsx" />
     <Content Include="Ressources\categories-propre.csv" />
+    <Content Include="Ressources\data_beer.sql" />
     <Content Include="Ressources\etablissements-propre.csv" />
     <Content Include="Ressources\maquette-ctb.psd" />
     <Content Include="Ressources\styles-propre.csv" />
