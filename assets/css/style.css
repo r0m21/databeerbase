@@ -1,114 +1,14 @@
-body {
-    background: url('img/background.png') repeat center center transparent;
-}
-
-/*
- * 1 - Colors / Backgrounds
- */
-.transparentBg  { background: rgba(0, 0, 0, 0.5);   }
-.bg_error       { background: #7A200D;              }
-.bg_success     { background: #317A0D;              }
-
-.bg0            { background: #222;                 }
-.bg1            { background: #fff;                 }
-
-.color0 { color: #222;  }
-.color1 { color: #fff;  }
-
-/*
- * Heights & Widths
- */
-.w50        { width: 50%;           }
-.w70        { width: 70%;           }
-.w100       { width: 100%;          }
-
-.w216p      { width: 216px;         }       
-
-.h35p       { height: 35px;         }
-.h170p      { height: 170px;        }
-
-.h5vh       { height: 5vh;          }
-
-.mh100vh    { min-height: 100vh;    }
-
-.lh5vh      { line-height: 5vh;     }
-
-/*
- * Displays & Propriétés de displays
- */
-.flex { display: flex; }
-
-.wrap           { flex-wrap: wrap;                  }
-.fcolumn        { flex-direction: column;           }
-.fgrow          { flex-grow: 1;                     }
-
-.itemsCenter    { align-items: center;              }
-
-.jc_center      { justify-content: center;          }
-.spaceBetween   { justify-content: space-between;   }
-
-/*
- * Fonts & Texts
- */
-.cinzel { font-family: 'Cinzel', serif;     }
-
-.fs14   { font-size: 1.4rem;    }
-.fs16   { font-size: 1.6rem;    }
-.fs18   { font-size: 1.8rem;    }
-.fs3    { font-size: 3rem;      }
-.fs6    { font-size: 6rem;      }
-.fs8    { font-size: 8rem;      }
-
-.bold           { font-weight: bold;            }
-
-.uppercase      { text-transform: uppercase;    }
-.no_decoration  { text-decoration: none;        }
-.underline      { text-decoration: underline;   }
-.pointer        { cursor: pointer;              }
-
-.txt_center     { text-align: center;           }
-
-/*
- * Borders
- */
-.no_border  { border: none; }
-
-/*
- * Margins & Paddings
- */
-.center { margin: 0 auto;       }
-
-.mt10p  { margin-top: 10px;     }
-.mt20p  { margin-top: 20px;     }
-.mt100p { margin-top: 100px;    }
-
-.mb20p  { margin-bottom: 20px;  }
-
-.ml10p  { margin-left: 10px;    }
-.ml20p  { margin-left: 20px;    }
-
-.mr20p  { margin-right: 20px;   }
-
-.p10p   { padding: 10px;        }
-.p20p   { padding: 20px;        }
-
-.pt5p   { padding-top: 5px;     }
-.pt10p  { padding-top: 10px;    }
-
-.pr5p   { padding-right: 5px;   }
-.pr10p  { padding-right: 10px;  }
-.pr20p  { padding-right: 20px;  }
-
-.pb5p   { padding-bottom: 5px;  }
-.pb10p  { padding-bottom: 10px; }
-.pb20p  { padding-bottom: 20px; }
-
-.pl5p   { padding-left: 5px;    }
-.pl10p  { padding-left: 10px;   }
-.pl20p  { padding-left: 20px;   }
+/* ------------- Couleurs ------------- */
+.color1{color:#F0F0EB;} /* gris clair */
+.color2{color:#f5b553;} /* jaune doré */
+.color3{color:#854836;} /* marron */
+.color4{color:#fff;} /* blanc */
+.color5{color:#222222;} /* noir */
 
 
-/*
- * Classes spécifiques
- */
-.menu_features { background: url('./img/menu-frame.png') no-repeat center center transparent;   }
+.bgcolor1{background-color:#F0F0EB;} /* gris clair */
+.bgcolor2{background-color: #f5b553;} /* jaune doré */
+.bgcolor3{background-color: #854836;} /* marron */
+.bgcolor4{background-color: #fff} /* blanc */
+.bgcolor5{background-color: #222222} /* noir */
+.bgnocolor{background:none !important;}
