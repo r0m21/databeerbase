@@ -1,6 +1,6 @@
 vendor
 .htaccess
 app/config.php
-deta_beer.sql
+Ressources/data_beer.sql
 ChopeTaBierre.phpproj.user
 .vs
