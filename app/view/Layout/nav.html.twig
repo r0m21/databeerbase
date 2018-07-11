@@ -1,21 +1,7 @@
-<header class="w100 transparentBg">
-    <nav class="w70 h5vh lh5vh flex spaceBetween center" role="navigation">
-        <div>
-            <a class="cinzel fs1_4 color1 no_decoration pr20p pl20p" href="">My Custom RPG</a>
+<header>
+
+    
+    <nav>
         
-            {% if sessions.User is defined and sessions.User != '' %}
-                {% if sessions.Game is defined and sessions.Game != '' %}
-                    <a class="cinzel fs1_4 color1 no_decoration pr20p pl20p" href="game">Tableau de bord</a>    
-                {% endif %}
-            {% endif %}
-        </div>
-        <div>
-            {% if sessions.User is defined and sessions.User != '' %}
-                <a class="cinzel fs1_4 color1 no_decoration pr20p pl20p" href="logout">Se déconnecter</a>
-            {% else  %}
-                <a class="cinzel fs1_4 color1 no_decoration pr20p pl20p" href="login">Se connecter</a>
-            {% endif %}
-            <a class="cinzel fs1_4 color1 no_decoration pr20p pl20p" href="help">Aide</a>
-        </div>
     </nav>
 </header>
