@@ -66,8 +66,10 @@ html{font-size:62.5%;}
 
         .noborder{border:none !important;}
         .noshadow{box-shadow:none;}
-        
+        .imgcarousel{max-width: 640px;
+        max-height:auto;}
         hr{color:#f5b553;
             border:1px solid;}
         .nopargin{margin:0;
         padding:0;}
+        
