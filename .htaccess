@@ -4,7 +4,7 @@ Options +FollowSymLinks
 RewriteEngine On
 
 # Adresse de base de ré-écriture
-RewriteBase /ChopeTaBiere
+RewriteBase /databeerbase
 
 
 # Règles
