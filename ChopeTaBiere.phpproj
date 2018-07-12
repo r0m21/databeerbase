@@ -1,0 +1,109 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>ChopeTaBiere</Name>
+    <ProjectGuid>{f8995c5d-d2a9-4e0d-8a63-b0fad1f36ef9}</ProjectGuid>
+    <RootNamespace>
+    </RootNamespace>
+    <OutputType>Library</OutputType>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app\controller\ErrorController.php" />
+    <Compile Include="app\controller\GameController.php" />
+    <Compile Include="app\controller\PageController.php" />
+    <Compile Include="app\controller\UserController.php" />
+    <Compile Include="app\kernel\Controller.php" />
+    <Compile Include="app\kernel\Database.php" />
+    <Compile Include="app\kernel\Kernel.php" />
+    <Compile Include="app\kernel\Model.php" />
+    <Compile Include="app\kernel\Router.php" />
+    <Compile Include="app\model\Game.php" />
+    <Compile Include="app\model\User.php" />
+    <Compile Include="app\view\Error\404.html.twig" />
+    <Compile Include="app\view\Game\game.html.twig" />
+    <Compile Include="app\view\Game\new-game.html.twig" />
+    <Compile Include="app\view\Layout\footer.html.twig" />
+    <Compile Include="app\view\Layout\layout.html.twig" />
+    <Compile Include="app\view\Layout\nav.html.twig" />
+    <Compile Include="app\view\Page\help.html.twig" />
+    <Compile Include="app\view\Page\index.html.twig" />
+    <Compile Include="app\view\User\login.html.twig" />
+    <Compile Include="app\view\User\signup.html.twig" />
+    <Compile Include="app\config.php" />
+    <Compile Include="app\functions.common.php" />
+    <Compile Include="assets\css\style.css" />
+    <Compile Include="assets\img\beers\affligem.png" />
+    <Compile Include="assets\img\beers\dadsroot.png" />
+    <Compile Include="assets\img\beers\dadsroot_diet.png" />
+    <Compile Include="assets\img\beers\dosequis.png" />
+    <Compile Include="assets\img\beers\duff.png" />
+    <Compile Include="assets\img\beers\epidor.png" />
+    <Compile Include="assets\img\beers\FMR.png" />
+    <Compile Include="assets\img\beers\gorkha.png" />
+    <Compile Include="assets\img\beers\heineken.png" />
+    <Compile Include="assets\img\beers\ichnusa.png" />
+    <Compile Include="assets\img\beers\ipa.png" />
+    <Compile Include="assets\img\beers\Molson.png" />
+    <Compile Include="assets\img\caroussel\brasserie1.jpeg" />
+    <Compile Include="assets\img\caroussel\brasserie2.jpg" />
+    <Compile Include="assets\img\caroussel\brasserie3.jpg" />
+    <Compile Include="assets\img\caroussel\pub_indoor.jpg" />
+    <Compile Include="assets\img\caroussel\pub_indoor2.jpg" />
+    <Compile Include="assets\img\caroussel\pub_outdoor.jpg" />
+    <Compile Include="assets\img\icons\home.png" />
+    <Compile Include="assets\img\icons\question.png" />
+    <Compile Include="assets\js\owl.carousel.js" />
+    <Compile Include="assets\js\script.js" />
+    <Compile Include="Ressources\beer.xlsm" />
+    <Compile Include="Ressources\beers-propres.csv" />
+    <Compile Include="Ressources\beers-propres2.csv" />
+    <Compile Include="Ressources\beers.csv" />
+    <Compile Include="Ressources\beers.xlsm" />
+    <Compile Include="Ressources\categories (Enregistré automatiquement).xlsx" />
+    <Compile Include="Ressources\categories-propres.csv" />
+    <Compile Include="Ressources\data_beer.sql" />
+    <Compile Include="Ressources\data_beer_wb.mwb" />
+    <Compile Include="Ressources\etablissements-propre.csv" />
+    <Compile Include="Ressources\maquette-ctb.psd" />
+    <Compile Include="Ressources\styles-propres.csv" />
+    <Compile Include=".gitignore" />
+    <Compile Include=".htaccess" />
+    <Compile Include="ChopeTaBiere.phpproj" />
+    <Compile Include="composer.json" />
+    <Compile Include="composer.lock" />
+    <Compile Include="index.php" />
+    <Compile Include="info.php" />
+    <Compile Include="README.md" />
+    <Compile Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".vs\ChopeTaBiere\v15" />
+    <Folder Include=".vs\ChopeTaBiere" />
+    <Folder Include=".vs" />
+    <Folder Include="app\controller" />
+    <Folder Include="app\kernel" />
+    <Folder Include="app\model" />
+    <Folder Include="app\view\Error" />
+    <Folder Include="app\view\Game" />
+    <Folder Include="app\view\Layout" />
+    <Folder Include="app\view\Page" />
+    <Folder Include="app\view\User" />
+    <Folder Include="app\view" />
+    <Folder Include="app" />
+    <Folder Include="assets\css" />
+    <Folder Include="assets\img\beers" />
+    <Folder Include="assets\img\caroussel" />
+    <Folder Include="assets\img\icons" />
+    <Folder Include="assets\img" />
+    <Folder Include="assets\js" />
+    <Folder Include="assets" />
+    <Folder Include="Ressources" />
+  </ItemGroup>
+</Project>
