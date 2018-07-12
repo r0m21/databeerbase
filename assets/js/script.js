@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel();
+    $('select').formSelect();
   });
 
 $('.owl-carousel').owlCarousel({
@@ -23,7 +24,3 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-  });
