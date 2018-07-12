@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 ob_start();
 error_reporting(E_ALL ^ E_NOTICE | E_WARNING);
 ini_set('display_errors', 'ON');

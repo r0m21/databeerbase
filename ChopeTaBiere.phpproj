@@ -2,12 +2,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Name>ChopeTaBiere</Name>
-    <ProjectGuid>{3f2b14d3-40ad-4829-a802-4060e6016caa}</ProjectGuid>
+    <ProjectGuid>{f8995c5d-d2a9-4e0d-8a63-b0fad1f36ef9}</ProjectGuid>
     <RootNamespace>
     </RootNamespace>
     <OutputType>Library</OutputType>
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
-    <ProjectHome />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -16,8 +15,6 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include=".vs\slnx.sqlite" />
-    <Compile Include=".vs\VSWorkspaceState.json" />
     <Compile Include="app\controller\ErrorController.php" />
     <Compile Include="app\controller\GameController.php" />
     <Compile Include="app\controller\PageController.php" />
@@ -41,19 +38,44 @@
     <Compile Include="app\view\User\signup.html.twig" />
     <Compile Include="app\config.php" />
     <Compile Include="app\functions.common.php" />
-    <Compile Include="assets\css\fonts\rpgawesome-webfont.eot" />
-    <Compile Include="assets\css\fonts\rpgawesome-webfont.svg" />
-    <Compile Include="assets\css\fonts\rpgawesome-webfont.ttf" />
-    <Compile Include="assets\css\fonts\rpgawesome-webfont.woff" />
-    <Compile Include="assets\css\img\background-body.jpg" />
-    <Compile Include="assets\css\img\background.png" />
-    <Compile Include="assets\css\img\button.png" />
-    <Compile Include="assets\css\img\hover_button.png" />
-    <Compile Include="assets\css\img\menu-frame.png" />
     <Compile Include="assets\css\style.css" />
+    <Compile Include="assets\img\beers\affligem.png" />
+    <Compile Include="assets\img\beers\dadsroot.png" />
+    <Compile Include="assets\img\beers\dadsroot_diet.png" />
+    <Compile Include="assets\img\beers\dosequis.png" />
+    <Compile Include="assets\img\beers\duff.png" />
+    <Compile Include="assets\img\beers\epidor.png" />
+    <Compile Include="assets\img\beers\FMR.png" />
+    <Compile Include="assets\img\beers\gorkha.png" />
+    <Compile Include="assets\img\beers\heineken.png" />
+    <Compile Include="assets\img\beers\ichnusa.png" />
+    <Compile Include="assets\img\beers\ipa.png" />
+    <Compile Include="assets\img\beers\Molson.png" />
+    <Compile Include="assets\img\caroussel\brasserie1.jpeg" />
+    <Compile Include="assets\img\caroussel\brasserie2.jpg" />
+    <Compile Include="assets\img\caroussel\brasserie3.jpg" />
+    <Compile Include="assets\img\caroussel\pub_indoor.jpg" />
+    <Compile Include="assets\img\caroussel\pub_indoor2.jpg" />
+    <Compile Include="assets\img\caroussel\pub_outdoor.jpg" />
+    <Compile Include="assets\img\icons\home.png" />
+    <Compile Include="assets\img\icons\question.png" />
+    <Compile Include="assets\js\owl.carousel.js" />
     <Compile Include="assets\js\script.js" />
+    <Compile Include="Ressources\beer.xlsm" />
+    <Compile Include="Ressources\beers-propres.csv" />
+    <Compile Include="Ressources\beers-propres2.csv" />
     <Compile Include="Ressources\beers.csv" />
+    <Compile Include="Ressources\beers.xlsm" />
+    <Compile Include="Ressources\categories (Enregistré automatiquement).xlsx" />
+    <Compile Include="Ressources\categories-propres.csv" />
+    <Compile Include="Ressources\data_beer.sql" />
+    <Compile Include="Ressources\data_beer_wb.mwb" />
+    <Compile Include="Ressources\etablissements-propre.csv" />
+    <Compile Include="Ressources\maquette-ctb.psd" />
+    <Compile Include="Ressources\styles-propres.csv" />
     <Compile Include=".gitignore" />
+    <Compile Include=".htaccess" />
+    <Compile Include="ChopeTaBiere.phpproj" />
     <Compile Include="composer.json" />
     <Compile Include="composer.lock" />
     <Compile Include="index.php" />
@@ -62,8 +84,8 @@
     <Compile Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include=".vs\databeerbase\v15" />
-    <Folder Include=".vs\databeerbase" />
+    <Folder Include=".vs\ChopeTaBiere\v15" />
+    <Folder Include=".vs\ChopeTaBiere" />
     <Folder Include=".vs" />
     <Folder Include="app\controller" />
     <Folder Include="app\kernel" />
@@ -75,48 +97,13 @@
     <Folder Include="app\view\User" />
     <Folder Include="app\view" />
     <Folder Include="app" />
-    <Folder Include="assets\css\fonts" />
-    <Folder Include="assets\css\img" />
     <Folder Include="assets\css" />
-    <Folder Include="assets\img\" />
-    <Folder Include="assets\img\beers\" />
-    <Folder Include="assets\img\caroussel\" />
-    <Folder Include="assets\img\icons\" />
+    <Folder Include="assets\img\beers" />
+    <Folder Include="assets\img\caroussel" />
+    <Folder Include="assets\img\icons" />
+    <Folder Include="assets\img" />
     <Folder Include="assets\js" />
     <Folder Include="assets" />
     <Folder Include="Ressources" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".htaccess" />
-    <Content Include="assets\img\beers\affligem.png" />
-    <Content Include="assets\img\beers\dadsroot.png" />
-    <Content Include="assets\img\beers\dadsroot_diet.png" />
-    <Content Include="assets\img\beers\dosequis.png" />
-    <Content Include="assets\img\beers\duff.png" />
-    <Content Include="assets\img\beers\epidor.png" />
-    <Content Include="assets\img\beers\FMR.png" />
-    <Content Include="assets\img\beers\gorkha.png" />
-    <Content Include="assets\img\beers\heineken.png" />
-    <Content Include="assets\img\beers\ichnusa.png" />
-    <Content Include="assets\img\beers\ipa.png" />
-    <Content Include="assets\img\beers\Molson.png" />
-    <Content Include="assets\img\caroussel\brasserie1.jpeg" />
-    <Content Include="assets\img\caroussel\brasserie2.jpg" />
-    <Content Include="assets\img\caroussel\brasserie3.jpg" />
-    <Content Include="assets\img\caroussel\pub_indoor.jpg" />
-    <Content Include="assets\img\caroussel\pub_indoor2.jpg" />
-    <Content Include="assets\img\caroussel\pub_outdoor.jpg" />
-    <Content Include="assets\img\icons\home.png" />
-    <Content Include="assets\img\icons\question.png" />
-    <Content Include="assets\js\owl.carousel.js" />
-    <Content Include="ChopeTaBierre.phpproj.user" />
-    <Content Include="Ressources\beers-propres.csv" />
-    <Content Include="Ressources\beers.xlsm" />
-    <Content Include="Ressources\categories %28Enregistré automatiquement%29.xlsx" />
-    <Content Include="Ressources\categories-propres.csv" />
-    <Content Include="Ressources\data_beer.sql" />
-    <Content Include="Ressources\etablissements-propre.csv" />
-    <Content Include="Ressources\maquette-ctb.psd" />
-    <Content Include="Ressources\styles-propres.csv" />
   </ItemGroup>
 </Project>
