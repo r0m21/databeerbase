@@ -12,10 +12,30 @@ class Router {
         if($request === '' || $request === '/'){ // Route vers la page d'accueil
             $result['controller']   = 'Index';
             $result['action']       = 'display';
+    
         } else {
             $parts = explode('/', $request); 
-        }
 
+            if($parts[0] == 'recherche' && (count($parts) == 1 || $parts[1] == '')){
+                $result['controller']   = 'Page';
+                $result['action']       = 'searchBeer';
+            }
+            else if($parts[0] == 'informations' && (count($parts) == 1 || $parts[1] == '')){
+                $result['controller']   = 'Page';
+                $result['action']       = 'informations';
+            }
+            else if($parts[0] == 'info-beer' && count($parts) == 2){
+                $result['controller']   = 'Page';
+                $result['action']       = 'infoBeer';
+                $result['params']['id'] = $parts[1];
+            }
+        }
+        
+        
+
+        
+         
+  
         return $result;
     }
     
