@@ -1,14 +1,73 @@
+html{font-size:62.5%;}
+
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400');
+
+/* ------------- Fonts ------------- */
+        /* Tailles */
+        .fs24{font-size:2.4rem;}
+        .fs20{font-size:2rem;}
+        .fs18{font-size:1.8rem;}
+        .fs12{font-size: 1.2rem;}
+        .bold{font-weight:600;}
+        .light{font-weight:300;}
+
+        /* Families */
+        .roboto{font-family: 'Roboto', sans-serif;}
+        .oswald{font-family: 'Oswald', sans-serif;}
+
+
 /* ------------- Couleurs ------------- */
 
-.color1{color:#F0F0EB;} /* gris clair */
-.color2{color:#f5b553;} /* jaune doré */
-.color3{color:#854836;} /* marron */
-.color4{color:#fff;} /* blanc */
-.color5{color:#222222;} /* noir */
+        .color1{color:#F0F0EB;} /* gris clair */
+        .color2{color:#f5b553;} /* jaune doré */
+        .color3{color:#854836;} /* marron */
+        .color4{color:#fff;} /* blanc */
+        .color5{color:#222222;} /* noir */
 
-.bgcolor1{background-color:#F0F0EB;} /* gris clair */
-.bgcolor2{background-color: #f5b553;} /* jaune doré */
-.bgcolor3{background-color: #854836;} /* marron */
-.bgcolor4{background-color: #fff} /* blanc */
-.bgcolor5{background-color: #222222} /* noir */
-.bgnocolor{background:none !important;}
+        .bgcolor1{background-color:#F0F0EB;} /* gris clair */
+        .bgcolor2{background-color: #f5b553;} /* jaune doré */
+        .bgcolor3{background-color: #854836;} /* marron */
+        .bgcolor4{background-color: #fff} /* blanc */
+        .bgcolor5{background-color: #222222} /* noir */
+        .bgnocolor{background:none !important;}
+
+
+/* ------------- Génériques ------------- */
+
+        .flex{display: flex;}
+        .jcbetween{justify-content: space-between;}
+        .jcaround{justify-content: space-around;}
+        .jccenter{justify-content: center;}
+        .absolute{position:absolute;}
+        .textjustify{text-align:justify;}
+
+
+
+/* ------------- Margins & Paddings ------------- */
+        .mbot30p{margin-bottom:30px;}
+        .padding15p{padding:15px;}
+        .mtop50p{margin-top:50px;}
+        .mtop30p{margin-top:30px;}
+        .mtop20p{margin-top:20px;}
+
+
+/* ------------- Heights ------------- */
+
+        .h300p{height:300px;}
+
+
+/* ------------- Widths ------------- */
+
+        .w605p{width:605px;}
+        .w300p{width:300px;}
+
+/* ------------- Spécifiques ------------- */
+
+        .noborder{border:none !important;}
+        .noshadow{box-shadow:none;}
+        
+        hr{color:#f5b553;
+            border:1px solid;}
+        .nopargin{margin:0;
+        padding:0;}
