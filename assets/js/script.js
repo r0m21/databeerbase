@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
     $(".owl-carousel").owlCarousel();
+    $('select').formSelect();
   });
 
 $('.owl-carousel').owlCarousel({
@@ -22,3 +23,4 @@ $('.owl-carousel').owlCarousel({
         }
     }
 })
+

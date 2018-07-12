@@ -5,7 +5,7 @@ class Beers extends Model {
 
 // ******** recupère une liste de 3 bières au hasard  ********
 
-   public function getListRandom($limit) 
+   public function getRandom($limit) 
    {
         $db = Database::getInstance();
         $sql = "SELECT * FROM  `beer`, `categories`, `style` WHERE cat_BEE = id_CAT and style_BEE=id_STY ORDER by RAND() LIMIT :limit";
@@ -17,7 +17,7 @@ class Beers extends Model {
    }
 
    // ******** recupère 1 bière par son id   ********
-   public function Load($id) {
+   public function getBeer($id) {
         $db = Database::getInstance();
         $sql = "SELECT * FROM  `beer`, `categories`, `style` WHERE cat_BEE = id_CAT and style_BEE=id_STY and id_BEE=:id";
         $stmt = $db->prepare($sql);
@@ -28,29 +28,31 @@ class Beers extends Model {
 }
 
  // ******** recherche par degrés categories styles nom de bière
- // searchnamebeer searchcatnationalite shearchstyle cherchedeg 
+// degBeermin => degrés / degBeermax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
    public function search() {
 
-//   $sBeer=strip_tags($_POST["searchnamebeer"]);
-//   $sCat=strip_tags($_POST["searchcatnationalite"]);
-//   $sStyle=strip_tags($_POST["shearchstyle"]);
-//   $sDeg=strip_tags($_POST["cherchedeg"]);
+   $sBeer="%".strip_tags($_POST["nom"])."%";
+   $sCat=strip_tags($_POST["nationalite"]);
+   $sStyle="%".strip_tags($_POST["styleBeer"])."%";
+   $sDegMin=strip_tags($_POST["degBeermin"]);
+   $sDegMax=strip_tags($_POST["degBeermax"]);
 
    
-//        $db = Database::getInstance();
-//        $sql = "SELECT * FROM  `beer`, `categories`, `style` WHERE cat_BEE =  and style_BEE=id_STY and id_BEE=:id";
-//        $stmt = $db->prepare($sql);
-//        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-//        $stmt->bindValue(':id', intval($id), PDO::FETCH_ASSOC);
-//        $stmt->execute();
-//        return $stmt->fetchAll();
-//}
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM  `beer`, `categories`, `style` WHERE cat_BEE = id_CAT AND style_BEE=id_STY and name_BEE like :nom AND cat_BEE= :nationalite AND name_STY like :styleBeer AND deg_BEE >= :degBeermin AND deg_BEE <= :degBeermax ORDER BY name_BEE ";
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->bindValue(':nom', $sBeer, PDO::FETCH_ASSOC);
+        $stmt->bindValue(':nationalite', intval($sCat), PDO::FETCH_ASSOC);
+        $stmt->bindValue(':styleBeer', $sStyle, PDO::FETCH_ASSOC);
+        $stmt->bindValue(':degBeermin', floatval($sDegMin), PDO::FETCH_ASSOC);
+        $stmt->bindValue(':degBeermax', floatval($sDegMax), PDO::FETCH_ASSOC);
+        $stmt->execute();
+        return $stmt->fetchAll();
+}
 
 
-
-
-
-
+}
 
 
 
@@ -169,4 +171,3 @@ class Beers extends Model {
 
 //        return $classe;
 //    }
-//}
