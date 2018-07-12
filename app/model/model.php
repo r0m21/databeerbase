@@ -28,26 +28,6 @@ class Beers extends Model {
 }
 
  // ******** recherche par degrés categories styles nom de bière
-<<<<<<< HEAD
- // degBeer => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière 
-   public function search() {
-
-   $sBeer=strip_tags($_POST["nom"]);
-   $sCat=strip_tags($_POST["nationalite"]);
-   $sStyle=strip_tags($_POST["stylebeer"]);
-   $sDeg=strip_tags($_POST["degBeer"]);
-
-   
-        $db = Database::getInstance();
-        $sql = "SELECT * FROM  `beer`, `categories`, `style` WHERE cat_BEE =  and style_BEE=id_STY and id_BEE=:id";
-        $stmt = $db->prepare($sql);
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->bindValue(':id', intval($id), PDO::FETCH_ASSOC);
-        $stmt->execute();
-        return $stmt->fetchAll();
-}
-}
-=======
 // degBeermin => degrés / degBeermax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
    public function search() {
 
@@ -191,4 +171,3 @@ class Beers extends Model {
 
 //        return $classe;
 //    }
->>>>>>> f851a31630ca3701d816ba6e1ff8d6745234e065
