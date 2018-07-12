@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{A0786B88-2ADB-4C21-ABE8-AA2D79766269}") = "ChopeTaBiere", "ChopeTaBiere.phpproj", "{F8995C5D-D2A9-4E0D-8A63-B0FAD1F36EF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8995C5D-D2A9-4E0D-8A63-B0FAD1F36EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8995C5D-D2A9-4E0D-8A63-B0FAD1F36EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DDE110BC-A44C-4A8D-B71B-50C951B0B1D8}
+	EndGlobalSection
+EndGlobal
