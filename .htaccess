@@ -11,4 +11,4 @@ RewriteBase /databeerbase
 RewriteCond %{SCRIPT_FILENAME} !-f
 RewriteCond %{SCRIPT_FILENAME} !-d
 
-RewriteRule (.*) index.php?query=$1 [QSA,L]
+RewriteRule (.*) index.php?request=$1 [QSA,L]

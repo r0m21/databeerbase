@@ -31,11 +31,6 @@ class Router {
             }
         }
         
-        
-
-        
-         
-  
         return $result;
     }
     
