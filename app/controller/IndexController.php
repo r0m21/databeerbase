@@ -5,7 +5,7 @@ class IndexController extends Controller {
         
 
 
-        $template = $this->twig->loadTemplate('/Index/display.html.twig');
+        $template = $this->twig->loadTemplate('/Index/index.html.twig');
         echo $template->render(array(
             
         ));

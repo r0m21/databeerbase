@@ -10,12 +10,10 @@ class Router {
         );
 
         if($request === '' || $request === '/'){ // Route vers la page d'accueil
-            $result['controller']   = 'Page';
-            $result['action']       = 'index';
+            $result['controller']   = 'Index';
+            $result['action']       = 'display';
         } else {
-            $parts = explode('/', $request);
-
-            
+            $parts = explode('/', $request); 
         }
 
         return $result;
