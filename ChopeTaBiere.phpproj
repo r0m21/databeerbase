@@ -7,6 +7,8 @@
     </RootNamespace>
     <OutputType>Library</OutputType>
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <SpecificPageValue>index.php</SpecificPageValue>
+    <StartAction>SpecificPage</StartAction>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>
@@ -16,41 +18,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app\controller\ErrorController.php" />
-    <Compile Include="app\controller\GameController.php" />
-    <Compile Include="app\controller\PageController.php" />
-    <Compile Include="app\controller\UserController.php" />
+    <Compile Include="app\controller\IndexController.php" />
     <Compile Include="app\kernel\Controller.php" />
     <Compile Include="app\kernel\Database.php" />
     <Compile Include="app\kernel\Kernel.php" />
     <Compile Include="app\kernel\Model.php" />
     <Compile Include="app\kernel\Router.php" />
-    <Compile Include="app\model\Game.php" />
-    <Compile Include="app\model\User.php" />
+    <Compile Include="app\model\model.php" />
     <Compile Include="app\view\Error\404.html.twig" />
-    <Compile Include="app\view\Game\game.html.twig" />
-    <Compile Include="app\view\Game\new-game.html.twig" />
     <Compile Include="app\view\Layout\footer.html.twig" />
     <Compile Include="app\view\Layout\layout.html.twig" />
     <Compile Include="app\view\Layout\nav.html.twig" />
     <Compile Include="app\view\Page\help.html.twig" />
-    <Compile Include="app\view\Page\index.html.twig" />
     <Compile Include="app\view\User\login.html.twig" />
     <Compile Include="app\view\User\signup.html.twig" />
     <Compile Include="app\config.php" />
     <Compile Include="app\functions.common.php" />
     <Compile Include="assets\css\style.css" />
-    <Compile Include="assets\img\beers\affligem.png" />
-    <Compile Include="assets\img\beers\dadsroot.png" />
-    <Compile Include="assets\img\beers\dadsroot_diet.png" />
-    <Compile Include="assets\img\beers\dosequis.png" />
-    <Compile Include="assets\img\beers\duff.png" />
-    <Compile Include="assets\img\beers\epidor.png" />
-    <Compile Include="assets\img\beers\FMR.png" />
-    <Compile Include="assets\img\beers\gorkha.png" />
-    <Compile Include="assets\img\beers\heineken.png" />
-    <Compile Include="assets\img\beers\ichnusa.png" />
-    <Compile Include="assets\img\beers\ipa.png" />
-    <Compile Include="assets\img\beers\Molson.png" />
     <Compile Include="assets\img\caroussel\brasserie1.jpeg" />
     <Compile Include="assets\img\caroussel\brasserie2.jpg" />
     <Compile Include="assets\img\caroussel\brasserie3.jpg" />
@@ -66,12 +50,9 @@
     <Compile Include="Ressources\beers-propres2.csv" />
     <Compile Include="Ressources\beers.csv" />
     <Compile Include="Ressources\beers.xlsm" />
-    <Compile Include="Ressources\categories (Enregistré automatiquement).xlsx" />
     <Compile Include="Ressources\categories-propres.csv" />
     <Compile Include="Ressources\data_beer.sql" />
-    <Compile Include="Ressources\data_beer_wb.mwb" />
     <Compile Include="Ressources\etablissements-propre.csv" />
-    <Compile Include="Ressources\maquette-ctb.psd" />
     <Compile Include="Ressources\styles-propres.csv" />
     <Compile Include=".gitignore" />
     <Compile Include=".htaccess" />
@@ -92,6 +73,7 @@
     <Folder Include="app\model" />
     <Folder Include="app\view\Error" />
     <Folder Include="app\view\Game" />
+    <Folder Include="app\view\Index\" />
     <Folder Include="app\view\Layout" />
     <Folder Include="app\view\Page" />
     <Folder Include="app\view\User" />
@@ -105,5 +87,11 @@
     <Folder Include="assets\js" />
     <Folder Include="assets" />
     <Folder Include="Ressources" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\view\Index\index.html.twig" />
+    <Content Include="assets\img\icons\icon-bieres-01.png" />
+    <Content Include="assets\img\logo-ctb-01.png" />
+    <Content Include="Ressources\maquette-ctb2.psd" />
   </ItemGroup>
 </Project>
