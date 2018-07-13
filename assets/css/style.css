@@ -1,7 +1,7 @@
 html{font-size:62.5%;}
 
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400');
+
 
 /* ------------- Fonts ------------- */
         /* Tailles */
@@ -16,6 +16,7 @@ html{font-size:62.5%;}
         /* Families */
         .roboto{font-family: 'Roboto', sans-serif;}
         .oswald{font-family: 'Oswald', sans-serif;}
+        .raleway{font-family: 'Raleway', sans-serif;}
 
 
 /* ------------- Couleurs ------------- */
@@ -52,6 +53,8 @@ html{font-size:62.5%;}
         .mtop50p{margin-top:50px;}
         .mtop30p{margin-top:30px;}
         .mtop20p{margin-top:20px;}
+        .mleft30p{margin-left:30px;}
+        .mleft10p{margin-left:10px;}
 
 
 /* ------------- Heights ------------- */
@@ -60,7 +63,7 @@ html{font-size:62.5%;}
         .h210p{height:210px;}
         .h180p{height:180px;}
 
-        .lh210{line-height: 210px;}
+        .lh210p{line-height: 210px;}
 
 
 /* ------------- Widths ------------- */
@@ -83,6 +86,9 @@ html{font-size:62.5%;}
         
         .owl-prev {display: none;}
         .owl-nav{display:none;}
+        .logo:before, .logo:after { content:''; display:inline-block; vertical-align: middle; width: 75px; height: 3px; background: red;}
+        .logo:before { margin-right: 27px; }
+        .logo:after { margin-left: 27px; }
 
 
 /* ------------- Media queries ------------- */
@@ -105,8 +111,18 @@ html{font-size:62.5%;}
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-    .imgcarousel{max-width: 640px;
-        max-height:210px;}
+        .imgcarousel{max-width: 640px;
+                max-height:210px;
+                }
 
+        .navBottom{position:absolute;
+                bottom:0;
+                left:50%;
+                transform:translateX(-50%);
+                display:inline-block;
+                line-height: 0px;
+                }
+        .h180p{height:0px;}
+        .respHR{width:200px}
           
 }
