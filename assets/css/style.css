@@ -126,8 +126,10 @@ html{font-size:62.5%;}
                 }
         .h300p{height:200px;}
         .h180p{height:0px;}
-        .respHR{width:200px}
+        .respHR{width:200px;}
         .w605p{width:300px}
         .mtop10-sm{margin-top:10px;}
+        .mbot10-sm{margin-bottom:10px;}
+        .mtop10neg-sm{margin-top:-10px;}
         .fs16-sm{font-size:1.6rem;}
 }
