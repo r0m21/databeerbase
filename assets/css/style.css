@@ -12,6 +12,7 @@ html{font-size:62.5%;}
         .fs12{font-size: 1.2rem;}
         .bold{font-weight:600;}
         .light{font-weight:300;}
+        .orientation{text-orientation: sideways-left; writing-mode: tb-rl;}
 
         /* Families */
         .roboto{font-family: 'Roboto', sans-serif;}
