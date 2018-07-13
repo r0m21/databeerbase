@@ -12,7 +12,7 @@
     </head>
     <body class="bgcolor1">
         {% include 'Layout/header.html.twig' %}
-        {% include 'Layout/carousel.html.twig' %}
+        {% block carousel %}{% endblock %}
 
         <main>
             {% block content %}{% endblock %}
