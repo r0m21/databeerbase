@@ -28,8 +28,6 @@
     <Compile Include="app\view\Error\404.html.twig" />
     <Compile Include="app\view\Layout\footer.html.twig" />
     <Compile Include="app\view\Layout\layout.html.twig" />
-    <Compile Include="app\view\Layout\nav.html.twig" />
-    <Compile Include="app\view\Page\help.html.twig" />
     <Compile Include="app\view\User\login.html.twig" />
     <Compile Include="app\view\User\signup.html.twig" />
     <Compile Include="app\config.php" />
@@ -65,9 +63,6 @@
     <Compile Include="readme.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include=".vs\ChopeTaBiere\v15" />
-    <Folder Include=".vs\ChopeTaBiere" />
-    <Folder Include=".vs" />
     <Folder Include="app\controller" />
     <Folder Include="app\kernel" />
     <Folder Include="app\model" />
@@ -90,6 +85,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\view\Index\index.html.twig" />
+    <Content Include="app\view\Layout\carousel.html.twig" />
+    <Content Include="app\view\Layout\header.html.twig" />
+    <Content Include="app\view\Page\infoBeer.html.twig" />
+    <Content Include="app\view\Page\infos.html.twig" />
+    <Content Include="app\view\Page\searchBeer.html.twig" />
     <Content Include="assets\img\icons\icon-bieres-01.png" />
     <Content Include="assets\img\logo-ctb-01.png" />
     <Content Include="Ressources\maquette-ctb2.psd" />
