@@ -85,7 +85,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\view\Index\index.html.twig" />
-    <Content Include="app\view\Layout\carousel.html.twig" />
     <Content Include="app\view\Layout\header.html.twig" />
     <Content Include="app\view\Page\infoBeer.html.twig" />
     <Content Include="app\view\Page\infos.html.twig" />
