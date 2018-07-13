@@ -39,4 +39,13 @@
         </p>
     </div>
 
+    {% for beer in randomBeer %}
+        <p>
+            {{ beer.NAME_BEE }}
+            {{ beer.DESC_BEE }}
+            {{ beer.ID_BEE }}
+        </p>
+    {% endfor %}
+
 {% endblock %}
+
