@@ -2,6 +2,7 @@
 <html>
     <head>
         <base href="http://localhost/databeerbase/">
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400|Raleway" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -12,7 +13,7 @@
     </head>
     <body class="bgcolor1">
         {% include 'Layout/header.html.twig' %}
-        {% include 'Layout/carousel.html.twig' %}
+        {% block carousel %}{% endblock %}
 
         <main>
             {% block content %}{% endblock %}
