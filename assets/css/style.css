@@ -2,7 +2,6 @@ html{font-size:62.5%;}
 
 
 
-
 /* ------------- Fonts ------------- */
         /* Tailles */
         .fs133{font-size:8.3125rem;}
@@ -54,6 +53,7 @@ html{font-size:62.5%;}
         .mtop50p{margin-top:50px;}
         .mtop30p{margin-top:30px;}
         .mtop20p{margin-top:20px;}
+        .mtopNeg20p{margin-top:-20px;}
         .mleft30p{margin-left:30px;}
         .mleft10p{margin-left:10px;}
 
@@ -72,6 +72,7 @@ html{font-size:62.5%;}
         .w605p{width:605px;}
         .w300p{width:300px;}
         .w150p{width:150px;}
+        .w75p{width:75px;}
 
 /* ------------- Spécifiques ------------- */
 
@@ -87,9 +88,7 @@ html{font-size:62.5%;}
         
         .owl-prev {display: none;}
         .owl-nav{display:none;}
-        .logo:before, .logo:after { content:''; display:inline-block; vertical-align: middle; width: 75px; height: 3px; background: red;}
-        .logo:before { margin-right: 27px; }
-        .logo:after { margin-left: 27px; }
+
 
 
 /* ------------- Media queries ------------- */
@@ -116,14 +115,20 @@ html{font-size:62.5%;}
                 max-height:210px;
                 }
 
-        .navBottom{position:absolute;
+        .navBottom{position:fixed;
                 bottom:0;
                 left:50%;
                 transform:translateX(-50%);
                 display:inline-block;
                 line-height: 0px;
+                background-color:white;
+                opacity:0.8;
+                width:100%;
                 }
+        .h300p{height:200px;}
         .h180p{height:0px;}
         .respHR{width:200px}
-          
+        .w605p{width:300px}
+        .mtop10-sm{margin-top:10px;}
+        .fs20-sm{font-size:1.6rem;}
 }
