@@ -65,6 +65,7 @@ html{font-size:62.5%;}
         .h180p{height:180px;}
 
         .lh210p{line-height: 210px;}
+        .lh100p{line-height:100px;}
 
 
 /* ------------- Widths ------------- */
@@ -127,8 +128,10 @@ html{font-size:62.5%;}
                 }
         .h300p{height:200px;}
         .h180p{height:0px;}
-        .respHR{width:200px}
+        .respHR{width:200px;}
         .w605p{width:300px}
         .mtop10-sm{margin-top:10px;}
-        .fs20-sm{font-size:1.6rem;}
+        .mbot10-sm{margin-bottom:10px;}
+        .mtop10neg-sm{margin-top:-10px;}
+        .fs16-sm{font-size:1.6rem;}
 }
