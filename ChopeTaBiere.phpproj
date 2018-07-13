@@ -19,6 +19,7 @@
   <ItemGroup>
     <Compile Include="app\controller\ErrorController.php" />
     <Compile Include="app\controller\IndexController.php" />
+    <Compile Include="app\controller\PageController.php" />
     <Compile Include="app\kernel\Controller.php" />
     <Compile Include="app\kernel\Database.php" />
     <Compile Include="app\kernel\Kernel.php" />
@@ -41,14 +42,7 @@
     <Compile Include="assets\img\caroussel\pub_outdoor.jpg" />
     <Compile Include="assets\img\icons\home.png" />
     <Compile Include="assets\img\icons\question.png" />
-    <Compile Include="assets\js\owl.carousel.js" />
     <Compile Include="assets\js\script.js" />
-    <Compile Include="Ressources\beer.xlsm" />
-    <Compile Include="Ressources\beers-propres.csv" />
-    <Compile Include="Ressources\beers-propres2.csv" />
-    <Compile Include="Ressources\beers.csv" />
-    <Compile Include="Ressources\beers.xlsm" />
-    <Compile Include="Ressources\categories-propres.csv" />
     <Compile Include="Ressources\data_beer.sql" />
     <Compile Include="Ressources\etablissements-propre.csv" />
     <Compile Include="Ressources\styles-propres.csv" />
@@ -89,8 +83,14 @@
     <Content Include="app\view\Page\infoBeer.html.twig" />
     <Content Include="app\view\Page\infos.html.twig" />
     <Content Include="app\view\Page\searchBeer.html.twig" />
+    <Content Include="assets\css\nouislider.css" />
+    <Content Include="assets\css\StyleSheet1.css" />
     <Content Include="assets\img\icons\icon-bieres-01.png" />
     <Content Include="assets\img\logo-ctb-01.png" />
+    <Content Include="assets\js\nouislider.js" />
+    <Content Include="assets\js\nouislider.min.js" />
     <Content Include="Ressources\maquette-ctb2.psd" />
+    <Content Include="Ressources\maquette_ctb.ai" />
+    <Content Include="Ressources\maquette_ctb.pdf" />
   </ItemGroup>
 </Project>
