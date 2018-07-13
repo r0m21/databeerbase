@@ -4,12 +4,14 @@ html{font-size:62.5%;}
 
 /* ------------- Fonts ------------- */
         /* Tailles */
+        .fs133{font-size:8.3125rem;}
         .fs24{font-size:2.4rem;}
         .fs20{font-size:2rem;}
         .fs18{font-size:1.8rem;}
         .fs12{font-size: 1.2rem;}
         .bold{font-weight:600;}
         .light{font-weight:300;}
+        .orientation{text-orientation: sideways-left; writing-mode: tb-rl;}
 
         /* Families */
         .roboto{font-family: 'Roboto', sans-serif;}
@@ -126,8 +128,10 @@ html{font-size:62.5%;}
                 }
         .h300p{height:200px;}
         .h180p{height:0px;}
-        .respHR{width:200px}
+        .respHR{width:200px;}
         .w605p{width:300px}
         .mtop10-sm{margin-top:10px;}
+        .mbot10-sm{margin-bottom:10px;}
+        .mtop10neg-sm{margin-top:-10px;}
         .fs16-sm{font-size:1.6rem;}
 }

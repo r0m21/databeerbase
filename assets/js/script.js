@@ -22,7 +22,7 @@ $('.owl-carousel').owlCarousel({
             items:3
         }
     }
-})
+});
 
 /* noUiSlider (cuseur double utilisé pour sélectionner des intervals des degrés des bière) */
 
