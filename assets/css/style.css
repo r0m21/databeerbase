@@ -1,7 +1,7 @@
 html{font-size:62.5%;}
 
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400');
+
 
 /* ------------- Fonts ------------- */
         /* Tailles */
@@ -14,7 +14,6 @@ html{font-size:62.5%;}
 
         /* Families */
         .roboto{font-family: 'Roboto', sans-serif;}
-        .oswald{font-family: 'Oswald', sans-serif;}
 
 
 /* ------------- Couleurs ------------- */
