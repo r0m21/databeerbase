@@ -1,20 +1,22 @@
 html{font-size:62.5%;}
 
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:200,300,400');
 
 /* ------------- Fonts ------------- */
         /* Tailles */
+        .fs133{font-size:8.3125rem;}
         .fs24{font-size:2.4rem;}
         .fs20{font-size:2rem;}
         .fs18{font-size:1.8rem;}
         .fs12{font-size: 1.2rem;}
         .bold{font-weight:600;}
         .light{font-weight:300;}
+        .orientation{text-orientation: sideways-left; writing-mode: tb-rl;}
 
         /* Families */
         .roboto{font-family: 'Roboto', sans-serif;}
         .oswald{font-family: 'Oswald', sans-serif;}
+        .raleway{font-family: 'Raleway', sans-serif;}
 
 
 /* ------------- Couleurs ------------- */
@@ -51,6 +53,9 @@ html{font-size:62.5%;}
         .mtop50p{margin-top:50px;}
         .mtop30p{margin-top:30px;}
         .mtop20p{margin-top:20px;}
+        .mtopNeg20p{margin-top:-20px;}
+        .mleft30p{margin-left:30px;}
+        .mleft10p{margin-left:10px;}
 
 
 /* ------------- Heights ------------- */
@@ -59,7 +64,8 @@ html{font-size:62.5%;}
         .h210p{height:210px;}
         .h180p{height:180px;}
 
-        .lh210{line-height: 210px;}
+        .lh210p{line-height: 210px;}
+        .lh100p{line-height:100px;}
 
 
 /* ------------- Widths ------------- */
@@ -67,6 +73,7 @@ html{font-size:62.5%;}
         .w605p{width:605px;}
         .w300p{width:300px;}
         .w150p{width:150px;}
+        .w75p{width:75px;}
 
 /* ------------- Spécifiques ------------- */
 
@@ -82,6 +89,7 @@ html{font-size:62.5%;}
         
         .owl-prev {display: none;}
         .owl-nav{display:none;}
+
 
 
 /* ------------- Media queries ------------- */
@@ -104,8 +112,26 @@ html{font-size:62.5%;}
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
-    .imgcarousel{max-width: 640px;
-        max-height:210px;}
+        .imgcarousel{max-width: 640px;
+                max-height:210px;
+                }
 
-          
+        .navBottom{position:fixed;
+                bottom:0;
+                left:50%;
+                transform:translateX(-50%);
+                display:inline-block;
+                line-height: 0px;
+                background-color:white;
+                opacity:0.8;
+                width:100%;
+                }
+        .h300p{height:200px;}
+        .h180p{height:0px;}
+        .respHR{width:200px;}
+        .w605p{width:300px}
+        .mtop10-sm{margin-top:10px;}
+        .mbot10-sm{margin-bottom:10px;}
+        .mtop10neg-sm{margin-top:-10px;}
+        .fs16-sm{font-size:1.6rem;}
 }

@@ -33,14 +33,14 @@ class Beers extends Model {
 }
 
  // ******** recherche par degrés categories styles nom de bière
-// degBeermin => degrés / degBeermax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
+// degBeermin => degrés / degBeerMax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
    public function search() {
 
    $sBeer="%".strip_tags($_POST["nom"])."%";
    $sCat=strip_tags($_POST["nationalite"]);
    $sStyle="%".strip_tags($_POST["styleBeer"])."%";
-   $sDegMin=strip_tags($_POST["degBeermin"]);
-   $sDegMax=strip_tags($_POST["degBeermax"]);
+   $sDegMin=strip_tags($_POST["degBeerMin"]);
+   $sDegMax=strip_tags($_POST["degBeerMax"]);
 
    
         $db = Database::getInstance();
@@ -58,8 +58,8 @@ class Beers extends Model {
         $stmt->bindValue(':nom', $sBeer, PDO::FETCH_ASSOC);
         $stmt->bindValue(':nationalite', intval($sCat), PDO::FETCH_ASSOC);
         $stmt->bindValue(':styleBeer', $sStyle, PDO::FETCH_ASSOC);
-        $stmt->bindValue(':degBeermin', floatval($sDegMin), PDO::FETCH_ASSOC);
-        $stmt->bindValue(':degBeermax', floatval($sDegMax), PDO::FETCH_ASSOC);
+        $stmt->bindValue(':degBeerMin', floatval($sDegMin), PDO::FETCH_ASSOC);
+        $stmt->bindValue(':degBeerMax', floatval($sDegMax), PDO::FETCH_ASSOC);
         $stmt->execute();
         return $stmt->fetchAll();
     }

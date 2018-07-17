@@ -12,6 +12,7 @@ class Router {
         if($request === '' || $request === '/'){ // Route vers la page d'accueil
             $result['controller']   = 'Index';
             $result['action']       = 'display';
+            $result['params']['limit'] = 3;
     
         } else {
             $parts = explode('/', $request); 
