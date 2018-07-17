@@ -24,7 +24,7 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-/* noUiSlider (cuseur double utilisé pour sélectionner des intervals des degrés des bière) */
+/* noUiSlider (curseur double utilisÃ© pour sÃ©lectionner des intervalles des degrÃ©s des biÃ¨res) */
 
 var slider = document.getElementById('test-slider');
 noUiSlider.create(slider, {
