@@ -6,6 +6,17 @@
 
 {% block content %}
 
+    {% for beer in infobeer %}
 
+        {{ beer.NAME_BEE }}<br>
+        {{ beer.DEG_BEE }}<br>
+        {{ beer.DESC_BEE }}<br>
+        <img src="{{ beer.FILEPATH_BEE }}" alt=""><br>
+
+    {% endfor %}
+
+    {{ style.NAME_STY }}<br>
+
+    {{ nationalite.NAME_CAT }}
     
 {% endblock %}
