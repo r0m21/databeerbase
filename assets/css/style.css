@@ -4,7 +4,8 @@ html{font-size:62.5%;}
 
 /* ------------- Fonts ------------- */
         /* Tailles */
-        .fs105{font-size:10.5rem;}
+        .fs95{font-size:9.5rem;}
+        .fs32{font-size:3.2rem;}
         .fs24{font-size:2.4rem;}
         .fs20{font-size:2rem;}
         .fs18{font-size:1.8rem;}
@@ -41,10 +42,10 @@ html{font-size:62.5%;}
         .jcbetween{justify-content: space-between;}
         .jcaround{justify-content: space-around;}
         .jccenter{justify-content: center;}
+        .iblock{display: inline-block;}
         .absolute{position:absolute;}
         .textjustify{text-align:justify;}
         .center{margin:auto;}
-
 
 
 /* ------------- Margins & Paddings ------------- */
@@ -105,7 +106,10 @@ html{font-size:62.5%;}
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-    
+        .mrightNeg100p{margin-right:-100px;}
+        .mleft100p{margin-left:100px;}
+
+
 }
 
 /* Medium Devices, Desktops */
@@ -115,7 +119,24 @@ html{font-size:62.5%;}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+        .block-on-med-and-down{display: block;}
+        .h1-sm{display:block;
+                margin:0;
+                font-size:4.6rem;
+                text-align: center;
+                writing-mode: horizontal-tb;
+                transform: rotate(0deg);
+                }
+        .navBottom{position:fixed;
+                bottom:0;
+                left:50%;
+                transform:translateX(-50%);
+                display:inline-block;
+                line-height: 0px;
+                background-color:white;
+                opacity:0.8;
+                width:100%;
+                }
 }
 
 /* Extra Small Devices, Phones */ 
@@ -138,8 +159,18 @@ html{font-size:62.5%;}
         .h180p{height:0px;}
         .respHR{width:200px;}
         .w605p{width:300px}
+        .mtop30-sm{margin-top:30px;}
         .mtop10-sm{margin-top:10px;}
         .mbot10-sm{margin-bottom:10px;}
         .mtop10neg-sm{margin-top:-10px;}
         .fs16-sm{font-size:1.6rem;}
+        .block-on-med-and-down{display: block;}
+        
+        .h1-sm{display:block;
+        margin:0;
+        font-size:3.2rem;
+        text-align: center;
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        }
 }
