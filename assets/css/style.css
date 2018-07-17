@@ -73,7 +73,7 @@ html{font-size:62.5%;}
 
 
 /* ------------- Widths ------------- */
-
+        .w100{width:100%;}
         .w605p{width:605px;}
         .w300p{width:300px;}
         .w150p{width:150px;}
