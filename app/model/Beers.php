@@ -4,12 +4,14 @@ class Beers extends Model {
 
 // ******** recupère une liste de 3 bières au hasard  ********
 
-   public function getRandom() 
+   public static function getRandom() 
    {
         $db = Database::getInstance();
-        $sql = "SELECT * FROM  `beer`, `categories`, `style` 
+        
+        $sql = "SELECT * FROM  beer, categories, style 
                 WHERE cat_BEE = id_CAT 
-                AND style_BEE = id_STY ORDER by RAND() LIMIT 3";
+                AND style_BEE = id_STY
+                ORDER by RAND() LIMIT 3";
 
         $stmt = $db->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
