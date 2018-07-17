@@ -7,7 +7,6 @@ class Beers extends Model {
    public static function getRandom() 
    {
         $db = Database::getInstance();
-        
         $sql = "SELECT * FROM  beer, categories, style 
                 WHERE cat_BEE = id_CAT 
                 AND style_BEE = id_STY
@@ -19,20 +18,79 @@ class Beers extends Model {
         return $stmt->fetchAll();
    }
 
-   // ******** recupère 1 bière par son id   ********
+
+/* REQUETE FACTORISEE */
+
+   // ******** Récupère 1 bière par son id ********
+
    public function getBeer($id) {
         $db = Database::getInstance();
-        $sql = "SELECT * FROM  `beer`, `categories`, `style` 
-                WHERE cat_BEE = id_CAT 
-                AND style_BEE=id_STY 
-                AND id_BEE=:id";
+        $sql = "SELECT * FROM beer 
+                WHERE id_BEE = :id";
 
         $stmt = $db->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->bindValue(':id', intval($id), PDO::FETCH_ASSOC);
+        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll();
 }
+
+// ******** Récupère le degrés d'une bière par son ID ********
+
+public function getDeg($id) {
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM beer 
+                WHERE id_BEE = :id";
+
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+}
+
+// ******** Récupère le style de la bière séléctionnée par son ID ********
+
+public function getStyle($id) {
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM beer 
+                WHERE id_BEE = :id";
+
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+}
+
+// ******** Récupère la description d'une bière par son id ********
+
+public function getDesc($id) {
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM beer 
+                WHERE id_BEE = :id";
+
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+}
+
+// ******** recupère 1 bière par son id   ********
+
+   public function getNationalite($id) {
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM beer 
+                WHERE id_BEE = :id";
+
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll();
+}
+
 
  // ******** recherche par degrés categories styles nom de bière
 // degBeermin => degrés / degBeerMax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
@@ -53,7 +111,7 @@ class Beers extends Model {
                 AND cat_BEE = :nationalite 
                 AND name_STY like :styleBeer 
                 AND deg_BEE >= :degBeermin 
-                AND deg_BEE <= :degBeermax ORDER BY name_BEE ";
+                AND deg_BEE <= :degBeermax ORDER BY name_BEE";
 
         $stmt = $db->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
