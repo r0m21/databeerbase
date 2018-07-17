@@ -38,16 +38,20 @@
             Bonne visite ! L'équipe de CTB      
         </p>
     </div>
-    
-    {% for beer in randomBeer %}
-    <section class="oswald color5 flex container">
-        <div class="row">
-        <h2 class="center-align">{{ beer.NAME_BEE }}</h2>
-            <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
-        </div>
-        <p class="fs20 light mleft30">{{ beer.DESC_BEE }}</p>
-    </section>
-    {% endfor %}
 
+<!--         <h1 class="rotated fs95 oswald mtopNeg20p mleft100p mrightNeg100p h1-sm h1-mm"><span class="color2">N</span><span class="color5">OTRE SELECTION</span></h1>
+ -->
+    {% for beer in randomBeer %}
+    <section class="flex block-on-med-and-down color5 container">
+
+                <div class="center-align">
+                    <h2>{{ beer.NAME_BEE }}</h2>
+                    <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
+                </div>
+                    <p class="container center-align fs20 light mleft30p oswald">{{ beer.DESC_BEE }}</p>
+            </div>
+        </section>
+
+    {% endfor %}
 {% endblock %}
 
