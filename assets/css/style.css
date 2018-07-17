@@ -95,8 +95,7 @@ html{font-size:62.5%;}
         .owl-nav{display:none;}
         .rotated{
                 writing-mode: tb-rl;
-                transform: rotate(-180deg);
-            }
+                transform: rotate(-180deg);}
         i:hover{color:#f5b553;}
 
 
