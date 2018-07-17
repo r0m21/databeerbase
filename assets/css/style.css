@@ -4,7 +4,7 @@ html{font-size:62.5%;}
 
 /* ------------- Fonts ------------- */
         /* Tailles */
-        .fs133{font-size:8.3125rem;}
+        .fs105{font-size:10.5rem;}
         .fs24{font-size:2.4rem;}
         .fs20{font-size:2rem;}
         .fs18{font-size:1.8rem;}
@@ -89,6 +89,10 @@ html{font-size:62.5%;}
         
         .owl-prev {display: none;}
         .owl-nav{display:none;}
+        .rotated {
+                writing-mode: tb-rl;
+                transform: rotate(-180deg);
+            }
 
 
 
