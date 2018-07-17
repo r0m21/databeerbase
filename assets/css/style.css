@@ -79,20 +79,22 @@ html{font-size:62.5%;}
 
         .noborder{border:none !important;}
         .noshadow{box-shadow:none;}
-        .imgcarousel{max-width: 640px;
-            height:300px;}
+        .imgcarousel{
+                max-width: 640px;
+                height:300px;}
             
         hr{color:#f5b553;
             border:1px solid;}
         .nopargin{margin:0;
         padding:0;}
         
-        .owl-prev {display: none;}
+        .owl-prev{display: none;}
         .owl-nav{display:none;}
-        .rotated {
+        .rotated{
                 writing-mode: tb-rl;
                 transform: rotate(-180deg);
             }
+        i:hover{color:#f5b553;}
 
 
 
