@@ -40,11 +40,13 @@
     </div>
     
     {% for beer in randomBeer %}
-
-        {{ beer.NAME_BEE }}
-        {{ beer.DESC_BEE }}
-        <img src="{{ beer.FILEPATH_BEE }}" alt="">
-        
+    <section class="oswald color5 flex container">
+        <div class="row">
+        <h2 class="center-align">{{ beer.NAME_BEE }}</h2>
+            <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
+        </div>
+        <p class="fs20 light mleft30">{{ beer.DESC_BEE }}</p>
+    </section>
     {% endfor %}
 
 {% endblock %}
