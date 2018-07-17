@@ -5,7 +5,6 @@ class IndexController extends Controller {
         
         $limit = $this->route['params']['limit'];
         $randomBeer = Beers::getRandom($limit);
-        print_r($randomBeer);
         $template = $this->twig->loadTemplate('/Index/index.html.twig');
         echo $template->render(array(
 
