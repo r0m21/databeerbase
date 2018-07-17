@@ -4,8 +4,8 @@ class Beers extends Model {
 
 // ******** recupère une liste de 3 bières au hasard  ********
 
-   public static function getRandom() 
-   {
+public static function getRandom(){
+
         $db = Database::getInstance();
         $sql = "SELECT * FROM  beer, categories, style 
                 WHERE cat_BEE = id_CAT 
@@ -16,28 +16,15 @@ class Beers extends Model {
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
         return $stmt->fetchAll();
-   }
+}
 
 
 /* REQUETE FACTORISEE */
 
-   // ******** Récupère 1 bière par son id ********
+// ******** Récupère 1 bière par son id ********
 
-   public function getBeer($id) {
-        $db = Database::getInstance();
-        $sql = "SELECT * FROM beer 
-                WHERE id_BEE = :id";
+public static function getBeer($id) {
 
-        $stmt = $db->prepare($sql);
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetchAll();
-}
-
-// ******** Récupère le degrés d'une bière par son ID ********
-
-public function getDeg($id) {
         $db = Database::getInstance();
         $sql = "SELECT * FROM beer 
                 WHERE id_BEE = :id";
@@ -51,44 +38,39 @@ public function getDeg($id) {
 
 // ******** Récupère le style de la bière séléctionnée par son ID ********
 
-public function getStyle($id) {
+public static function getStyle($id) {
+
         $db = Database::getInstance();
-        $sql = "SELECT * FROM beer 
-                WHERE id_BEE = :id";
+        $sql = "SELECT name_STY FROM style AS S 
+                INNER JOIN beer AS B
+                ON s.id_STY = b.style_BEE
+                AND b.id_BEE = :id
+               ";
 
         $stmt = $db->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetch();
 }
 
-// ******** Récupère la description d'une bière par son id ********
 
-public function getDesc($id) {
+// ******** Récupère la nationalité de la bière par son id ********
+
+   public static function getNationalite($id) {
+
         $db = Database::getInstance();
-        $sql = "SELECT * FROM beer 
-                WHERE id_BEE = :id";
+        $sql = "SELECT name_CAT FROM categories 
+                INNER JOIN beer
+                ON categories.id_CAT = beer.cat_BEE
+                AND beer.id_BEE = :id
+               ";
 
         $stmt = $db->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
         $stmt->execute();
-        return $stmt->fetchAll();
-}
-
-// ******** recupère 1 bière par son id   ********
-
-   public function getNationalite($id) {
-        $db = Database::getInstance();
-        $sql = "SELECT * FROM beer 
-                WHERE id_BEE = :id";
-
-        $stmt = $db->prepare($sql);
-        $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->bindValue(':id', intval($id), PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetch();
 }
 
 

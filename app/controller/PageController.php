@@ -22,18 +22,17 @@ class PageController extends Controller{
 
         $id = $this->route["params"]["id"];
         $beer = Beers::getBeer($id);
-        $deg = Beers::getDeg($beer['id_BEE']);
-        $style = Beers::getStyle($beer['id_BEE']);
-        $desc = Beers::getDesc($beer['id_BEE']);
-        $nationalite = Beers::getNationalite($beer['id_BEE']);
+        $style = Beers::getStyle($id);
+        $nationalite = Beers::getNationalite($id);
+
+        print_r($style);
+        print_r($nationalite);
 
         $template = $this->twig->loadTemplate('/Page/infoBeer.html.twig');
         echo $template->render(array(
             
-            'beer' => $beer,
-            'deg' => $deg,
+            'infobeer' => $beer,
             'style' => $style,
-            'desc' => $desc,
             'nationalite' => $nationalite,
 
         ));
