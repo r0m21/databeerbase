@@ -25,8 +25,7 @@ class PageController extends Controller{
         $style = Beers::getStyle($id);
         $nationalite = Beers::getNationalite($id);
 
-        print_r($style);
-        print_r($nationalite);
+
 
         $template = $this->twig->loadTemplate('/Page/infoBeer.html.twig');
         echo $template->render(array(
