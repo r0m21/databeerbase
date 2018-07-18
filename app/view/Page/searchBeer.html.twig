@@ -23,16 +23,20 @@
         </select>
     </div>
 
-    {% for s in search %}
-        {{ s.NAME_BEE }}
-        <img src="{{ s.FILEPATH_BEE }}" alt="féerick">
-    {% endfor %}
-    
+
+    <div id="blockSearch">
+        {% for s in search %}
+            {{ s.NAME_BEE }}
+            <img src="{{ s.FILEPATH_BEE }}" alt="féerick">
+        {% endfor %}
+    </div>
+
+
     <p class="range-field">
         <input type="range" id="test5" min="0" max="40" name="degBeer" />
     </p>
 
-    <input type="submit" name="submitForm" value="Rechercher">
+    <input type="submit" name="submitForm" value="Rechercher" id="submitForm">
 
 </form>
     
