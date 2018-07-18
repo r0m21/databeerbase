@@ -27,7 +27,7 @@ $('.owl-carousel').owlCarousel({
 /* Limitation du texte aux 100 premiers caractères */
 
 $(document).ready(function ()
-{ $(".textLimit").each(function(i){
+{ $(".textLimitIndex").each(function(i){
      var len=$(this).text().trim().length;
      if(len>100)
      {
@@ -36,3 +36,12 @@ $(document).ready(function ()
  });
 });
 
+$(document).ready(function ()
+{ $(".textLimitSearch").each(function(i){
+     var len=$(this).text().trim().length;
+     if(len>12)
+     {
+         $(this).text($(this).text().substr(0,12)+'...');
+     }
+ });
+});
