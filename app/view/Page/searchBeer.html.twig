@@ -5,5 +5,32 @@
 {% endblock %}
 
 {% block content %}
+
+<form action="" method="POST">
+
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" id="nom">
+
+    <label for="style">Style</label>
+    <input type="text" name="styleBeer" id="style">
+
+    <div class="col s12">
+        <select id="nationalite">
+            <option value="">Choisir une nationalité</option>
+
+            {% for o in options %}
+                <option value="{{ o.NAME_CAT }}"></option>
+            {% endfor %}
+
+        </select>
+    </div>
+    
+    <p class="range-field">
+        <input type="range" id="test5" min="0" max="40" name="degBeer" />
+    </p>
+
+    <input type="submit" name="submitForm" value="Rechercher">
+
+</form>
     
 {% endblock %}
