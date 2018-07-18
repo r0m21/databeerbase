@@ -29,10 +29,14 @@
             Bienvenue sur "Chope ta bière !", site dédié à la présentation (avant dégustation) de bières internationales.
             Vous trouverez des informations (origine, style et degré d'alcool) sur plus de 1000 bières.
             Cliquez sur l'icône "loupe" pour rechercher la bière que vous voulez, et sur le "?" pour accéder aux informations légales du site.
-            <br>
-            Attention, ce site peut contenir certaines images. 
-            <br>
-            Nous vous rappelons que l'abus d'alcool.
+            <p class="nopargin col offset-s2 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
+                    Attention, ce site peut contenir certaines images. 
+      
+                </p>
+                <p class="nopargin col offset-s2 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
+                        Nous vous rappelons que l'abus d'alcool.      
+                    </p>
+            
             
         </p>
         <p class="col offset-s2 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
@@ -42,7 +46,7 @@
 
 
  <section class="flex block-on-med-and-down color5 mtop30-sm">
-    <h1 class="rotated fs95 oswald mtopNeg30p mleft100p mrightNeg100p h1-sm h1-mm"><span class="color2">N</span><span class="color5">OTRE SELECTION</span></h1>
+    <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm"><span class="color2">N</span><span class="color5">OTRE SELECTION</span></h1>
     <div class="container">
             <div class="row jcaround">
 
@@ -52,7 +56,7 @@
                 <h2 class="fs24 bold">{{ beer.NAME_BEE }}</h2>
                 <hr class="w75p ">
                 <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
-                <p class="container fs20 light oswald">{{ beer.DESC_BEE }}</p>
+                <p class="textLimit container fs20 light oswald">{{ beer.DESC_BEE }}</p>
 
             </div>
 
