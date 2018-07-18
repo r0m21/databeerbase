@@ -39,9 +39,9 @@ $(document).ready(function ()
 $(document).ready(function ()
 { $(".textLimitSearch").each(function(i){
      var len=$(this).text().trim().length;
-     if(len>12)
+     if(len>20)
      {
-         $(this).text($(this).text().substr(0,12)+'...');
+         $(this).text($(this).text().substr(0,20)+'...');
      }
  });
 });
