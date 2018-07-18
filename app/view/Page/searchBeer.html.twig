@@ -24,8 +24,12 @@
     </div>
 
     {% for s in search %}
-        {{ s.NAME_BEE }}
-        <img src="{{ s.FILEPATH_BEE }}" alt="féerick">
+        <div class="card">
+            <div class="card-title">
+                {{ s.NAME_BEE }}
+            </div>
+            <img src="{{ s.FILEPATH_BEE }}" alt="résultatBière">
+        </div>
     {% endfor %}
     
     <p class="range-field">
