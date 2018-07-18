@@ -17,13 +17,16 @@
     <div class="col s12">
         <select id="nationalite">
             <option value="">Choisir une nationalité</option>
-
-            {% for o in options %}
-                <option value="{{ o.NAME_CAT }}"></option>
+            {% for o in option %}
+                <option value="{{ o.NAME_CAT }}">{{ o.NAME_CAT }}</option>
             {% endfor %}
-
         </select>
     </div>
+
+    {% for s in search %}
+        {{ s.NAME_BEE }}
+        <img src="{{ s.FILEPATH_BEE }}" alt="féerick">
+    {% endfor %}
     
     <p class="range-field">
         <input type="range" id="test5" min="0" max="40" name="degBeer" />

@@ -5,10 +5,14 @@ class PageController extends Controller{
     public function searchBeer(){
 
         $search = Beers::searchBeer($_POST);
-        print_r($search);
+        $option = Beers::getCategories();
+   
+
         $template = $this->twig->loadTemplate('/Page/searchBeer.html.twig');
         echo $template->render(array(
             
+            "search" => $search,
+            "option" => $option
         ));
 
 

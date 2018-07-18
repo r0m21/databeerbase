@@ -2,7 +2,7 @@
 
 class Beers extends Model {
 
-// ******** recupère une liste de 3 bières au hasard  ********
+// ******** Récupère une liste de 3 bières aléatoirement ********
 
 public static function getRandom(){
 
@@ -57,7 +57,7 @@ public static function getStyle($id) {
 
 // ******** Récupère la nationalité de la bière par son id ********
 
-   public static function getNationalite($id) {
+public static function getNationalite($id) {
 
         $db = Database::getInstance();
         $sql = "SELECT name_CAT FROM categories 
@@ -73,19 +73,26 @@ public static function getStyle($id) {
         return $stmt->fetch();
 }
 
+// ******** Récupère toutes les nationalités des bières ********
+
+public static function getCategories(){
+
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM categories";
+
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+}
 
 // ******** recherche par degrés categories styles nom de bière **********
 
-// degBeermin => degrés / degBeerMax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
+// degBeer => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
    
 public static function searchBeer($values) {
 
-  /*  $sBeer="%".strip_tags($_POST["nom"])."%";
-   $sCat=strip_tags($_POST["nationalite"]);
-   $sStyle="%".strip_tags($_POST["styleBeer"])."%";
-   $sDegMin=strip_tags($_POST["degBeerMin"]);
-   $sDegMax=strip_tags($_POST["degBeerMax"]); */
-   
         if(isset($_POST['submitForm'])){
    
         $db = Database::getInstance();
