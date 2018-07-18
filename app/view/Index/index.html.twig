@@ -25,31 +25,48 @@
         </div>
     </div>
     <div class="row">
-        <p class="col offset-s2 offset-m5 offset-l4 s8 m10 l4 fs20 fs16-sm oswald textjustify">Bienvenue sur "Chope ta bière !", site dédié à la présentation (avant dégustation) de bières internationales.
+        <p class="col offset-s2 offset-m2 offset-l4 s8 m8 l4 fs20 fs16-sm oswald textjustify">
+            Bienvenue sur "Chope ta bière !", site dédié à la présentation (avant dégustation) de bières internationales.
             Vous trouverez des informations (origine, style et degré d'alcool) sur plus de 1000 bières.
             Cliquez sur l'icône "loupe" pour rechercher la bière que vous voulez, et sur le "?" pour accéder aux informations légales du site.
-            <br>
-            Attention, ce site peut contenir certaines images. 
-            <br>
-            Nous vous rappelons que l'abus d'alcool.
+            <p class="nopargin col offset-s2 offset-m1 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
+                    Attention, ce site peut contenir certaines images. 
+      
+                </p>
+                <p class="nopargin col offset-s2 offset-m1 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
+                        Nous vous rappelons que l'abus d'alcool.      
+                    </p>
+            
             
         </p>
-        <p class="col offset-s2 offset-m5 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
+        <p class="col offset-s2 offset-m1 offset-l4 s8 m10 l4 fs20 fs16-sm oswald center-align">
             Bonne visite ! L'équipe de CTB      
         </p>
     </div>
-    
-    
 
-    {% for beer in randomBeer %}
-    <section class="oswald color5 flex container">
-        <div class="row">
-        <h2 class="center-align">{{ beer.NAME_BEE }}</h2>
-            <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
-        </div>
-        <p class="fs20 light mleft30">{{ beer.DESC_BEE }}</p>
-    </section>
-    {% endfor %}
+
+ <section class="flex block-on-med-and-down color5 mtop30-sm mtop80-mm">
+    <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm"><span class="color2">N</span><span class="color5">OTRE SELECTION</span></h1>
+    <div class="container">
+            <div class="row jcaround">
+
+        {% for beer in randomBeer %}
+
+            <div class="col l4 s12 center-align">
+                <h2 class="fs24 bold">{{ beer.NAME_BEE }}</h2>
+                <hr class="w75p">
+                <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
+                <p class="textLimit container fs20 light oswald">{{ beer.DESC_BEE }}</p>
+                <a href="info-beer/{{ beer.ID_BEE }}"><i class="fa fa-plus-circle fa-4x color2 mtop20p" aria-hidden="true"></i></a>
+
+
+            </div>
+
+        {% endfor %}
+    </div>
+
+    </div>
+</section>
 
 {% endblock %}
 
