@@ -3,6 +3,9 @@
 class PageController extends Controller{
 
     public function searchBeer(){
+
+        $search = Beers::searchBeer($_POST);
+        print_r($search);
         $template = $this->twig->loadTemplate('/Page/searchBeer.html.twig');
         echo $template->render(array(
             
@@ -24,9 +27,6 @@ class PageController extends Controller{
         $beer = Beers::getBeer($id);
         $style = Beers::getStyle($id);
         $nationalite = Beers::getNationalite($id);
-
-        print_r($style);
-        print_r($nationalite);
 
         $template = $this->twig->loadTemplate('/Page/infoBeer.html.twig');
         echo $template->render(array(

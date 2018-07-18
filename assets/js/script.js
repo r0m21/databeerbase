@@ -26,7 +26,7 @@ $('.owl-carousel').owlCarousel({
 
 /* noUiSlider (curseur double utilisé pour sélectionner des intervalles des degrés des bières) */
 
-var slider = document.getElementById('test-slider');
+/* var slider = document.getElementById('test-slider');
 noUiSlider.create(slider, {
     start: [20, 80],
     connect: true,
@@ -39,4 +39,4 @@ noUiSlider.create(slider, {
     format: wNumb({
         decimals: 0
     })
-});
+}); */
