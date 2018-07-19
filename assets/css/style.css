@@ -28,6 +28,8 @@ html{font-size:62.5%;}
         .color3{color:#854836;} /* marron */
         .color4{color:#fff;} /* blanc */
         .color5{color:#222222;} /* noir */
+        .txt-decoration-none{text-decoration: none;}
+        .color-inherit{color: inherit;}
 
         /* Backgrounds */
 
