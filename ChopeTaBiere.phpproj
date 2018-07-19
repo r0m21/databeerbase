@@ -25,7 +25,7 @@
     <Compile Include="app\kernel\Kernel.php" />
     <Compile Include="app\kernel\Model.php" />
     <Compile Include="app\kernel\Router.php" />
-    <Compile Include="app\model\model.php" />
+    <Compile Include="app\model\Beers.php" />
     <Compile Include="app\view\Error\404.html.twig" />
     <Compile Include="app\view\Layout\footer.html.twig" />
     <Compile Include="app\view\Layout\layout.html.twig" />
@@ -83,7 +83,6 @@
     <Content Include="app\view\Page\infos.html.twig" />
     <Content Include="app\view\Page\searchBeer.html.twig" />
     <Content Include="assets\css\nouislider.css" />
-    <Content Include="assets\css\StyleSheet1.css" />
     <Content Include="assets\img\icons\icon-bieres-01.png" />
     <Content Include="assets\img\img-404.jpg" />
     <Content Include="assets\img\logo-ctb-01.png" />
