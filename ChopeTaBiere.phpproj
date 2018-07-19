@@ -90,7 +90,6 @@
     <Content Include="assets\img\Mockup\mockup_beer_1.png" />
     <Content Include="assets\img\Mockup\mockup_beer_2.png" />
     <Content Include="assets\img\Mockup\mockup_beer_3.png" />
-    <Content Include="assets\js\nouislider.js" />
     <Content Include="assets\js\nouislider.min.js" />
     <Content Include="Ressources\data_beer.sql" />
     <Content Include="Ressources\maquette-ctb2.psd" />

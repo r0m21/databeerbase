@@ -41,4 +41,12 @@ class PageController extends Controller{
 
         ));
     }
+
+    public function ajaxSearch(){
+        $valeur = $this->route["params"]["valeur"];
+        $result = Beers::getAutoStyle($valeur);
+        $j_result = json_encode($result);
+        echo $j_result;
+
+}
 }

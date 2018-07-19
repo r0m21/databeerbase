@@ -46,10 +46,16 @@ html{font-size:62.5%;}
         /* Display and justify */
 
         .flex{display: flex;}
+        .flexdcolumn{ flex-direction:column;}
+        .flexaligncontcenter{ align-content: center;}
+        .flexalignitemcenter{ align-items: center;}
+        .flexaligncontentstart{ align-content:flex-start;}
         .iblock{display: inline-block;}
         .jcbetween{justify-content: space-between;}
         .jcaround{justify-content: space-around;}
         .jccenter{justify-content: center;}
+        .txtcenter{text-align:center;}
+
 
         /* Positions */
 
@@ -82,6 +88,8 @@ html{font-size:62.5%;}
         .h300p{height:300px;}
         .h210p{height:210px;}
         .h180p{height:180px;}
+        .h100prc{height:100%;}
+        .h90prc{height:50%;}
 
         .lh210p{line-height: 210px;}
         .lh100p{line-height:100px;}
@@ -93,6 +101,7 @@ html{font-size:62.5%;}
         .w300p{width:300px;}
         .w150p{width:150px;}
         .w75p{width:75px;}
+        .w100prc{width:100%;}
         
 
 /* ------------- Spécifiques ------------- */

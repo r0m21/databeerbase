@@ -45,3 +45,20 @@ $(document).ready(function ()
      }
  });
 });
+
+//********** ajax pour autocomplétion **************
+$('#styleBeer').on('keyup', function () {
+    $.ajax({
+        type: 'GET',
+        url: 'search-style/' + this.value,
+        cache: false,
+        success: function (response) {
+            autoCompleteSuccess(response, true);
+        },
+        error: function (xhr) {
+            console.log(JSON.parse(xhr.responseText));
+        }
+
+    });
+});
+
