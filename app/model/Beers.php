@@ -2,7 +2,7 @@
 
 class Beers extends Model {
 
-// ******** recupère une liste de 3 bières au hasard  ********
+// ******** Récupère une liste de 3 bières aléatoirement ********
 
 public static function getRandom(){
 
@@ -57,7 +57,7 @@ public static function getStyle($id) {
 
 // ******** Récupère la nationalité de la bière par son id ********
 
-   public static function getNationalite($id) {
+public static function getNationalite($id) {
 
         $db = Database::getInstance();
         $sql = "SELECT name_CAT FROM categories 
@@ -73,36 +73,63 @@ public static function getStyle($id) {
         return $stmt->fetch();
 }
 
+// ******** Récupère toutes les nationalités des bières ********
 
- // ******** recherche par degrés categories styles nom de bière
-// degBeermin => degrés / degBeerMax => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
-   public function search() {
+public static function getCategories(){
 
-   $sBeer="%".strip_tags($_POST["nom"])."%";
-   $sCat=strip_tags($_POST["nationalite"]);
-   $sStyle="%".strip_tags($_POST["styleBeer"])."%";
-   $sDegMin=strip_tags($_POST["degBeerMin"]);
-   $sDegMax=strip_tags($_POST["degBeerMax"]);
-
-   
         $db = Database::getInstance();
-        $sql = "SELECT * FROM  `beer`, `categories`, `style` 
-                WHERE cat_BEE = id_CAT 
-                AND style_BEE = id_STY 
-                AND name_BEE like :nom 
-                AND cat_BEE = :nationalite 
-                AND name_STY like :styleBeer 
-                AND deg_BEE >= :degBeermin 
-                AND deg_BEE <= :degBeermax ORDER BY name_BEE";
+        $sql = "SELECT * FROM categories";
 
         $stmt = $db->prepare($sql);
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
-        $stmt->bindValue(':nom', $sBeer, PDO::FETCH_ASSOC);
-        $stmt->bindValue(':nationalite', intval($sCat), PDO::FETCH_ASSOC);
-        $stmt->bindValue(':styleBeer', $sStyle, PDO::FETCH_ASSOC);
-        $stmt->bindValue(':degBeerMin', floatval($sDegMin), PDO::FETCH_ASSOC);
-        $stmt->bindValue(':degBeerMax', floatval($sDegMax), PDO::FETCH_ASSOC);
+        $stmt->execute();
+        return $stmt->fetchAll();
+
+}
+
+// ******** recherche par degrés categories styles nom de bière **********
+
+// degBeer => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
+   
+public static function searchBeer($values) {
+
+        if(isset($_POST['submitForm'])){
+   
+        $db = Database::getInstance();
+        $sql = "SELECT * FROM beer as b
+                inner join categories as c
+                inner join style as s
+                WHERE 1 = 1";
+
+        if(!empty($values['nationalite'])){
+                $sql .= " AND b.cat_BEE =" . $values['nationalite'];
+        }
+
+        if(!empty($values['styleBeer'])){
+                $sql .= " AND s.name_STY like '%" . $values['styleBeer'] . "%'";
+        }
+
+        if(!empty($values['nom'])){
+                $sql .= " AND b.name_BEE like '%" . $values['nom']. "%'";
+        }
+
+        if(!empty($values['degBeer'])){
+                $sql .= " AND b.deg_BEE <=" . $values['degBeer'];
+
+        }
+
+        $sql .= " AND b.cat_BEE = c.id_CAT
+                  AND b.style_BEE = s.id_STY";
+
+        $sql .= " ORDER BY RAND()
+                 LIMIT 50
+                ";
+
+        $stmt = $db->prepare($sql);
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
         $stmt->execute();
         return $stmt->fetchAll();
     }
+  
+}
 }

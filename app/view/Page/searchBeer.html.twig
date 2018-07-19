@@ -6,48 +6,40 @@
 
 {% block content %}
 
-<!-- <form action="" method="POST">
+    <section class="flex block-on-med-and-down">
 
-    <label for="nom">NOM</label>
-    <input type="text" name="nom" id="nom">
+        <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm right-align"><span class="color2">R</span><span class="color5">ECHERCHE</span></h1>
+        <div class="row">
+            <form action="" method="POST" class="col l11">
 
-    <label for="style">STYLE</label>
-    <input type="text" name="styleBeer" id="style">
+                <label for="nom" class="fs24 color5">Nom</label>
+                <input type="text" name="nom" id="nom">
 
-    <div class="input-field col s12">
-        <select id="nationalite">
-            <option value="" disabled selected>Choose your option</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-        </select>
-    </div>
+                <label for="style" class="fs24 color5">Style</label>
+                <input type="text" name="styleBeer" id="style">
 
-
-    <div id="test-slider"></div>
-
-    <div id="range-input" class="noUi-target noUi-ltr noUi-horizontal">
-    <div class="noUi-base">
-        <div class="noUi-origin" style="left: 20%;">
-        <div class="noUi-handle noUi-handle-lower" data-handle="0" style="z-index: 5;">
-            <div class="noUi-handle-touch-area"></div>
-            <div class="noUi-tooltip"><span>20</span></div>
+                <div class="col s12">
+                    <select id="nationalite" class="fs24">
+                        <option value="">Choisir une nationalité</option>
+                        {% for o in option %}
+                            <option value="{{ o.NAME_CAT }}">{{ o.NAME_CAT }}</option>
+                        {% endfor %}
+                    </select>
+                    <p class="range-field">
+                        <input type="range" id="test5" min="0" max="40" name="degBeer" />
+                    </p>
+                </div>
+                <input type="submit" name="submitForm" value="Rechercher">
+                <div class="container" id="blockSearch">
+                    {% for s in search %}
+                        <div class="card center-align col l4 ">
+                            <h3 class="fs20 card-title textLimitSearch">{{ s.NAME_BEE }}</h3>
+                            <a href="info-beer/{{ beer.ID_BEE }}"><i class="fa fa-plus-circle fa-4x color2 mtop20p padding15p" aria-hidden="true"></i></a>
+                            <img src="{{ s.FILEPATH_BEE }}" alt="résultatBière" >
+                        </div>
+                    {% endfor %}
+                </div>
+            </form>
         </div>
-        </div>
-        <div class="noUi-connect" style="left: 20%; right: 20%;"></div>
-        <div class="noUi-origin" style="left: 80%;">
-        <div class="noUi-handle noUi-handle-upper" data-handle="1" style="z-index: 4;">
-            <div class="noUi-handle-touch-area"></div>
-            <div class="noUi-tooltip"><span>80</span></div>
-        </div>
-        </div>
-    </div>
-    </div>
-
-    <input type="submit">
-
-</form> -->
-
-
-    
+    </section>
 {% endblock %}
