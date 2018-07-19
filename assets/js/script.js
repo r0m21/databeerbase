@@ -24,19 +24,24 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-/* noUiSlider (cuseur double utilisé pour sélectionner des intervals des degrés des bière) */
+/* Limitation du texte aux 100 premiers caractÃ¨res */
 
-var slider = document.getElementById('test-slider');
-noUiSlider.create(slider, {
-    start: [20, 80],
-    connect: true,
-    step: 1,
-    orientation: 'horizontal', // 'horizontal' or 'vertical'
-    range: {
-        'min': 0,
-        'max': 100
-    },
-    format: wNumb({
-        decimals: 0
-    })
+$(document).ready(function ()
+{ $(".textLimitIndex").each(function(i){
+     var len=$(this).text().trim().length;
+     if(len>100)
+     {
+         $(this).text($(this).text().substr(0,150)+'...');
+     }
+ });
+});
+
+$(document).ready(function ()
+{ $(".textLimitSearch").each(function(i){
+     var len=$(this).text().trim().length;
+     if(len>20)
+     {
+         $(this).text($(this).text().substr(0,20)+'...');
+     }
+ });
 });
