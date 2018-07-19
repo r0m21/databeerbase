@@ -34,7 +34,7 @@
                     {% for s in search %}
                         <div class="card center-align col l4 ">
                             <h3 class="fs20 card-title textLimitSearch">{{ s.NAME_BEE }}</h3>
-                            <a href="info-beer/{{ beer.ID_BEE }}"><i class="fas fa-info-circle fa-4x color2 mtop20p" aria-hidden="true"></i></a>
+                            <a href="info-beer/{{ s.ID_BEE }}"><i class="fas fa-info-circle fa-4x color2 mtop20p" aria-hidden="true"></i></a>
                             <img src="{{ s.FILEPATH_BEE }}" alt="résultatBière" >
                         </div>
                     {% endfor %}
