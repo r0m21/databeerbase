@@ -43,9 +43,7 @@
     <Compile Include="assets\img\icons\home.png" />
     <Compile Include="assets\img\icons\question.png" />
     <Compile Include="assets\js\script.js" />
-    <Compile Include="Ressources\data_beer.sql" />
     <Compile Include="Ressources\etablissements-propre.csv" />
-    <Compile Include="Ressources\styles-propres.csv" />
     <Compile Include=".gitignore" />
     <Compile Include=".htaccess" />
     <Compile Include="ChopeTaBiere.phpproj" />
@@ -73,6 +71,7 @@
     <Folder Include="assets\img\caroussel" />
     <Folder Include="assets\img\icons" />
     <Folder Include="assets\img" />
+    <Folder Include="assets\img\Mockup\" />
     <Folder Include="assets\js" />
     <Folder Include="assets" />
     <Folder Include="Ressources" />
@@ -86,9 +85,15 @@
     <Content Include="assets\css\nouislider.css" />
     <Content Include="assets\css\StyleSheet1.css" />
     <Content Include="assets\img\icons\icon-bieres-01.png" />
+    <Content Include="assets\img\img-404.jpg" />
     <Content Include="assets\img\logo-ctb-01.png" />
+    <Content Include="assets\img\Mockup\mockup_beer_0.png" />
+    <Content Include="assets\img\Mockup\mockup_beer_1.png" />
+    <Content Include="assets\img\Mockup\mockup_beer_2.png" />
+    <Content Include="assets\img\Mockup\mockup_beer_3.png" />
     <Content Include="assets\js\nouislider.js" />
     <Content Include="assets\js\nouislider.min.js" />
+    <Content Include="Ressources\data_beer.sql" />
     <Content Include="Ressources\maquette-ctb2.psd" />
     <Content Include="Ressources\maquette_ctb.ai" />
     <Content Include="Ressources\maquette_ctb.pdf" />
