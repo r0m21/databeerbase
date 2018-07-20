@@ -24,14 +24,24 @@ $('.owl-carousel').owlCarousel({
     }
 });
 
-/* Limitation du texte aux 100 premiers caractères */
+/* Limitation du texte */
+
+$(document).ready(function ()
+{ $(".titleLimitIndex").each(function(i){
+     var len=$(this).text().trim().length;
+     if(len>27)
+     {
+         $(this).text($(this).text().substr(0,25)+'...');
+     }
+ });
+});
 
 $(document).ready(function ()
 { $(".textLimitIndex").each(function(i){
      var len=$(this).text().trim().length;
      if(len>100)
      {
-         $(this).text($(this).text().substr(0,150)+'...');
+         $(this).text($(this).text().substr(0,125)+'...');
      }
  });
 });

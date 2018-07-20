@@ -69,6 +69,7 @@ html{font-size:62.5%;}
         .mtopNeg30p{margin-top:-30px;}
         .mtopNeg20p{margin-top:-20px;}
         .mleft100p{margin-left:100px;}
+        .mleft35p{margin-left:35px;}
         .mleft30p{margin-left:30px;}
         .mleft10p{margin-left:10px;}
 
@@ -134,7 +135,35 @@ html{font-size:62.5%;}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+        .block-on-med-and-down{display: block;}
+        .w100-mm{width:100%;}
+        .h180p{height:0px;}        
+        .mtop80-mm{margin-top:80px;}
+        .mtop30-mm{margin-top:30px;}
+        /* Annulation des classes appliquées au H1 en large-screen */
+        .h1-mm{
+                display:block;
+                margin:0;
+                font-size:4.6rem;
+                text-align: center;
+                writing-mode: horizontal-tb;
+                transform: rotate(0deg);
+                }
+        /* Placement de la nav en bottom fixed */
+        .navBottom{
+                position:fixed;
+                bottom:0;
+                left:50%;
+                transform:translateX(-50%);
+                display:inline-block;
+                line-height: 0px;
+                background-color:white;
+                opacity:0.8;
+                width:100%;
+                z-index:999;
+                }
+        .fs32-mm{font-size:3.2rem;}
+        .fs24-mm{font-size:2.4rem;}
 }
 
 /* Small Devices, Tablets */
@@ -164,6 +193,7 @@ html{font-size:62.5%;}
                 background-color:white;
                 opacity:0.8;
                 width:100%;
+                z-index:999;
                 }
         .fs32-mm{font-size:3.2rem;}
         .fs24-mm{font-size:2.4rem;}
@@ -185,6 +215,7 @@ html{font-size:62.5%;}
                 background-color:white;
                 opacity:0.8;
                 width:100%;
+                z-index:999;
                 }
         .h300p{height:200px;}
         .h180p{height:0px;}
