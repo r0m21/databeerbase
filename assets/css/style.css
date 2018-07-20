@@ -46,10 +46,6 @@ html{font-size:62.5%;}
         /* Display and justify */
 
         .flex{display: flex;}
-        .flexdcolumn{ flex-direction:column;}
-        .flexaligncontcenter{ align-content: center;}
-        .flexalignitemcenter{ align-items: center;}
-        .flexaligncontentstart{ align-content:flex-start;}
         .iblock{display: inline-block;}
         .jcbetween{justify-content: space-between;}
         .jcaround{justify-content: space-around;}
@@ -75,6 +71,7 @@ html{font-size:62.5%;}
         .mtop30p{margin-top:30px;}
         .mtop20p{margin-top:20px;}
         .mtop15p{margin-top: 15px;}
+        .mtop10p{margin-top: 10px;}
         .mrightNeg100p{margin-right:-100px;}
         .mtopNeg30p{margin-top:-30px;}
         .mtopNeg20p{margin-top:-20px;}
@@ -94,7 +91,7 @@ html{font-size:62.5%;}
         .h100prc{height:100%;}
         .h90prc{height:50%;}
 
-        .minheight210p{min-height: 210px;}
+        .minheight150p{min-height: 150px;}
 
         .lh210p{line-height: 210px;}
         .lh100p{line-height:100px;}
@@ -173,6 +170,7 @@ html{font-size:62.5%;}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+        .minheight150p{min-height: 0;}
         .block-on-med-and-down{display: block;}
         .w100-mm{width:100%;}
         .h180p{height:0px;}        
@@ -206,6 +204,7 @@ html{font-size:62.5%;}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+        .minheight150p{min-height: 0;}
         .block-on-med-and-down{display: block;}
         .w100-mm{width:100%;}
         .h180p{height:0px;}        
@@ -239,6 +238,7 @@ html{font-size:62.5%;}
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+        .minheight150p{min-height: 0;}
         .imgcarousel{
                 max-width: 640px;
                 max-height:210px;
