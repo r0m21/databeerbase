@@ -32,7 +32,7 @@
                 <input type="submit" name="submitForm" value="Rechercher">
                 <div class="container" id="blockSearch">
                     {% for s in search %}
-                        <div class="card center-align col l4 ">
+                        <div class="card center-align col l4">
                             <h3 class="fs20 card-title textLimitSearch">{{ s.NAME_BEE }}</h3>
                             <a href="info-beer/{{ beer.ID_BEE }}"><i class="fa fa-info-circle fa-4x color2 mtop20p padding15p" aria-hidden="true"></i></a>
                             <img src="{{ s.FILEPATH_BEE }}" alt="résultatBière" >

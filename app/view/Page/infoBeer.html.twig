@@ -1,38 +1,43 @@
 {% extends 'Layout/layout.html.twig' %}
 
 {% block title %}
-    {{ parent() }} - Infos Bières
+{{ parent() }} - Infos Bières
 {% endblock %}
 
 {% block content %}
 
 <section class="flex block-on-med-and-down color5 mtop30-sm mtop80-mm">
-        <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm right-align"><span class="color2">V</span><span class="color5">OTRE SELECTION</span></h1>
+    <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm right-align"><span class="color2">V</span><span class="color5">OTRE SELECTION</span></h1>
 
     <div class="container">
-        
+
         {% for beer in infobeer %}
         <div class="row">
-            <div class="fs20 fs24-mm col l11 row">
+            <div class="fs20 fs24-mm col l11">
                 <h2 class="fs24 bold center-align bold">{{ beer.NAME_BEE }}<br></h2>
                 <hr class="w150p">
-
-                <img src="{{ beer.FILEPATH_BEE }}" alt="bière" class="col l3 offset-s3 s6">
-                <div class="col l7">
-                    <p><span class="bold">Style : </span>{{ style.NAME_STY }}</p>
-                    <p><span class="bold">Degré :</span> {{ beer.DEG_BEE }}</p>
-                    <p><span class="bold"> Nationalité :</span> {{ nationalite.NAME_CAT }}</p>
-                    {{ beer.DESC_BEE }}
+                <div class="flex flexaligncontentstart">
+                    <div class="flex flexdcolumn flexaligncontcenter txtcenter">
+                        <img src="{{ beer.FILEPATH_BEE }}" alt="bière" class="col l11 offset-s3 s6">
+                        <a href="javascript:history.back()"><i class="fas fa-arrow-left fa-2x color5" id="iconretour"></i></a>
+                    </div>
+                    <div class="col l7">
+                        <p><span class="bold">Style : </span>{{ style.NAME_STY }}</p>
+                        <p><span class="bold">Degré :</span> {{ beer.DEG_BEE }}</p>
+                        <p><span class="bold"> Nationalité :</span> {{ nationalite.NAME_CAT }}</p>
+                        {{ beer.DESC_BEE }}
+                    </div>
                 </div>
             </div>
 
         </div>
 
         {% endfor %}
-    </div>
-    
 
-        
+    </div>
+
+
+
 </section>
-    
+
 {% endblock %}

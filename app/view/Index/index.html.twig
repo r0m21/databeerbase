@@ -53,7 +53,7 @@
         {% for beer in randomBeer %}
 
             <div class="col l4 s12 center-align">
-                <h2 class="fs24 bold">{{ beer.NAME_BEE }}</h2>
+                <h2 class="fs24 bold titleLimitIndex">{{ beer.NAME_BEE }}</h2>
                 <hr class="w75p">
                 <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
                 <p class="textLimitIndex container fs20 light oswald">{{ beer.DESC_BEE }}</p>
@@ -67,6 +67,8 @@
 
     </div>
 </section>
-
+<script>
+    document.getElementById("iconretour").style.visibility = "hidden";
+</script>
 {% endblock %}
 

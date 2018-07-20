@@ -37,6 +37,16 @@ $(document).ready(function ()
 });
 
 $(document).ready(function ()
+{ $(".titleLimitIndex").each(function(i){
+     var len=$(this).text().trim().length;
+     if(len>27)
+     {
+         $(this).text($(this).text().substr(0,25)+'...');
+     }
+ });
+});
+
+$(document).ready(function ()
 { $(".textLimitIndex").each(function(i){
      var len=$(this).text().trim().length;
      if(len>100)
@@ -55,3 +65,20 @@ $(document).ready(function ()
      }
  });
 });
+
+//********** ajax pour autocomplétion **************
+$('#styleBeer').on('keyup', function () {
+    $.ajax({
+        type: 'GET',
+        url: 'search-style/' + this.value,
+        cache: false,
+        success: function (response) {
+            autoCompleteSuccess(response, true);
+        },
+        error: function (xhr) {
+            console.log(JSON.parse(xhr.responseText));
+        }
+
+    });
+});
+
