@@ -47,6 +47,7 @@ html{font-size:62.5%;}
 
         .flex{display: flex;}
         .iblock{display: inline-block;}
+        .flexdcolumn{ flex-direction:column;}
         .jcbetween{justify-content: space-between;}
         .jcaround{justify-content: space-around;}
         .jccenter{justify-content: center;}
@@ -145,14 +146,11 @@ html{font-size:62.5%;}
                 padding-right:0px;
         }
 
-        .listautocomplete{position:relative; top:0px;left:0px; width:auto; z-index:500; border:1px solid black;}
-        .liautocomplete{
-                background-color:transparent;
-        }
+        .listautocomplete{position:relative;top:0px;left:0px; width:auto; z-index:500; border:1px solid black;display:none;}
 
-        .liautocomplete:hover {
-                background-color: #E2F6F6;
-        }
+        .liautocomplete{background-color:transparent;}
+
+        .liautocomplete:hover {background-color: #E2F6F6;}
 
         
         .waves-button-input{color:#fff;}
@@ -182,6 +180,8 @@ html{font-size:62.5%;}
         .h180p{height:0px;}        
         .mtop80-mm{margin-top:80px;}
         .mtop30-mm{margin-top:30px;}
+        .h56p-sm{height:56px;}
+        .lh56{line-height: 56px;}
         /* Annulation des classes appliquées au H1 en large-screen */
         .h1-mm{
                 display:block;
