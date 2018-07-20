@@ -53,10 +53,10 @@
         {% for beer in randomBeer %}
 
             <div class="col l4 s12 center-align">
-                <h2 class="fs24 bold">{{ beer.NAME_BEE }}</h2>
+                <h2 class="fs24 bold titleLimitIndex">{{ beer.NAME_BEE }}</h2>
                 <hr class="w75p">
                 <img src="{{ beer.FILEPATH_BEE }}" alt="bière">
-                <p class="textLimitIndex container fs20 light oswald">{{ beer.DESC_BEE }}</p>
+                <p class="textLimitIndex container fs20 light oswald minheight210p">{{ beer.DESC_BEE }}</p>
                 <div>
                 <a href="info-beer/{{ beer.ID_BEE }}"><i class="fas fa-info-circle fa-4x color2 mtop20p" aria-hidden="true"></i></a>
                 </div>
