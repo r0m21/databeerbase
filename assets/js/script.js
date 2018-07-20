@@ -56,14 +56,28 @@ $(document).ready(function ()
  });
 });
 
-$(document).ready(function ()
-{ $(".textLimitSearch").each(function(i){
-     var len=$(this).text().trim().length;
-     if(len>20)
-     {
-         $(this).text($(this).text().substr(0,20)+'...');
-     }
- });
+$(document).ready(function (){ 
+    $(".textLimitSearch").each(function(i){
+        var len=$(this).text().trim().length;
+        if(len>20){
+            $(this).text($(this).text().substr(0,20)+'...');
+        }
+    });
+});
+
+$('#styleBeer').on('keyup', function(){
+    $.ajax({
+        type: 'GET',
+        url: 'search-style/' + this.value,
+        cache: false,
+        success: function(response){
+            autoCompleteSuccess(response, true);
+        },
+        error: function(xhr){
+            console.log(JSON.parse(xhr.responseText));
+        }
+
+    });
 });
 
 //********** ajax pour autocomplétion **************
