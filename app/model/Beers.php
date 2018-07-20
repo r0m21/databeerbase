@@ -143,4 +143,16 @@ public static function searchBeer($values) {
     }
   
 }
+
+public static function getAutoStyle($valeur){
+$db = Database::getInstance();
+
+$sql = "SELECT * FROM style WHERE name_STY LIKE '%".$valeur."%'";
+$return = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+return $return;
+}
+
+
+
 }
