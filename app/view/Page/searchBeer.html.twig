@@ -6,30 +6,48 @@
 
 {% block content %}
 
-    <section class="flex block-on-med-and-down">
-
+    <section class="flex block-on-med-and-down pt50p">
         <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm right-align"><span class="color2">R</span><span class="color5">ECHERCHE</span></h1>
-        <div class="row container">
-            <form action="" method="GET" class="col l11">
+        <div class="row container mtop30-mm">
+            <div class="flex flexdcolumn">
+        
+                <form class="col 12 flexdcolumn " action="" method="GET">
 
-                <label for="nom" class="fs24 color5">Nom</label>
-                <input type="text" name="nom" id="nom">
+                    <div class="flex col l12 m12 nopadding">
 
-                <label for="style" class="fs24 color5">Style</label>
-                <input type="text" class="autocomplete" name="styleBeer" id="styleBeer">
-                
-                <div class="col s12">
-                    <select id="nationalite" class="fs24">
-                        <option value="">Choisir une nationalité</option>
-                        {% for o in option %}
-                            <option value="{{ o.NAME_CAT }}">{{ o.NAME_CAT }}</option>
-                        {% endfor %}
-                    </select>
-                    <p class="range-field">
-                        <input type="range" id="test5" min="0" max="40" name="degBeer" />
-                    </p>
-                </div>
-                <input type="submit" name="submitForm" value="Rechercher">
+                        <div class="input-field col s12 l6 m6 nopadding">
+                            <label for="nom" class="fs24 color5">Nom</label>
+                            <input type="text" name="nom" id="nom">
+                        </div>
+
+                        <div class="input-field col s12 l6 m6 nopadding">
+                            <label for="style" class="fs24 color5">Style</label>
+                            <input type="text" name="styleBeer" id="style">
+                            <div id="autocompletestyle" class="listautocomplete">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col s12 mleft30p flex flexdcolumn mtop40p">
+
+                        <select id="nationalite" class="fs24">
+                            <option value="">Choisir une nationalité</option>
+                            {% for o in option %}
+                                <option value="{{ o.NAME_CAT }}">{{ o.NAME_CAT }}</option>
+                            {% endfor %}
+                        </select>  
+
+                        <div class="range-field mtop40p">
+                            <input type="range" min="0" max="40" name="degBeer"/>
+                        </div>
+                    </div>
+
+                    <div class="flex jccenter col s12 mtop40p">
+                        <input class="btn waves-effect waves-light bgcolor2 color4" type="submit" name="submitForm" value="Rechercher">
+                    </div>
+
+                </form> 
+
                 <div class="container" id="blockSearch">
                     {% for s in search %}
                         <div class="card center-align col l4">
@@ -39,7 +57,8 @@
                         </div>
                     {% endfor %}
                 </div>
-            </form>
+
+            </div>
         </div>
     </section>
 {% endblock %}
