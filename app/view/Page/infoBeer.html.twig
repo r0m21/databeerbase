@@ -16,12 +16,12 @@
             <div class="fs20 fs24-mm col l11">
                 <h2 class="fs24 bold center-align bold">{{ beer.NAME_BEE }}<br></h2>
                 <hr class="w150p">
-                <div class="flex flexaligncontentstart">
-                    <div class="flex flexdcolumn flexaligncontcenter txtcenter">
-                        <img src="{{ beer.FILEPATH_BEE }}" alt="bière" class="col l11 offset-s3 s6">
+                <div class="flex col s12 flexcolumn">
+                    <div class="flex flexdcolumn aicenter txtcenter col m12 s12">
+                        <img src="{{ beer.FILEPATH_BEE }}" alt="bière" class="responsive-img">
                         <a href="javascript:history.back()"><i class="fas fa-arrow-left fa-2x color5" id="iconretour"></i></a>
                     </div>
-                    <div class="col l7">
+                    <div class="col m12 s12">
                         <p><span class="bold">Style : </span>{{ style.NAME_STY }}</p>
                         <p><span class="bold">Degré :</span> {{ beer.DEG_BEE }}</p>
                         <p><span class="bold"> Nationalité :</span> {{ nationalite.NAME_CAT }}</p>
