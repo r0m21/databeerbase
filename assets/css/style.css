@@ -86,8 +86,7 @@ html{font-size:62.5%;}
         .h300p{height:300px;}
         .h210p{height:210px;}
         .h180p{height:180px;}
-        .h100prc{height:100%;}
-        .h90prc{height:50%;}
+        
 
         .minheight150p{min-height: 150px;}
 
@@ -101,7 +100,7 @@ html{font-size:62.5%;}
         .w300p{width:300px;}
         .w150p{width:150px;}
         .w75p{width:75px;}
-        .w100prc{width:100%;}
+        
         
 
 /* ------------- Spécifiques ------------- */
@@ -129,6 +128,13 @@ html{font-size:62.5%;}
                 }
         i:hover{color:#f5b553;}
         
+
+        #back-to-top:hover {
+                background: #e9ebec;
+            }
+        #back-to-top.show {
+                opacity: 1;
+            }
 
 
 
@@ -185,6 +191,8 @@ html{font-size:62.5%;}
         .h180p{height:0px;}        
         .mtop80-mm{margin-top:80px;}
         .mtop30-mm{margin-top:30px;}
+        .h56p-sm{height:56px;}
+        .lh56{line-height: 56px;}
         /* Annulation des classes appliquées au H1 en large-screen */
         .h1-mm{
                 display:block;
@@ -232,6 +240,8 @@ html{font-size:62.5%;}
                 }
         .h300p{height:200px;}
         .h180p{height:0px;}
+        .h56p-sm{height:56px;}
+        .lh56{line-height: 56px;}
         .respHR{width:200px;}
         .w100-sm{width:100%;}
         .w605p{width:300px}

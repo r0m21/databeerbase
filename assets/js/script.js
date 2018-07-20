@@ -96,3 +96,16 @@ $('#styleBeer').on('keyup', function () {
     });
 });
 
+
+
+
+function backToTop() {
+    var screenWidth = $(window).width();
+
+    if (screenWidth < 1024) {
+        $('#back-to-top').addClass('show');
+    } else {
+        $('#back-to-top').removeClass('show');
+    }
+};
+
