@@ -87,19 +87,6 @@ public static function getCategories(){
 
 }
 
-// ******** Récupère la valeur de l'input pour crée l'autocomplete ********
-
-public static function getAutoStyle($valeur){
-        $db = Database::getInstance();
-
-        $sql = "SELECT * FROM style WHERE name_STY LIKE '%".$valeur."%'";
-        $return = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-
-        return $return;
-}
-
-// ******** recherche par degrés categories styles nom de bière **********
-
 // degBeer => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
    
 public static function searchBeer($values) {
@@ -144,4 +131,16 @@ public static function searchBeer($values) {
   
 }
 
+public static function getAutoStyle($valeur){
+        $db = Database::getInstance();
+        
+        $sql = "SELECT * FROM style WHERE name_STY LIKE '%".$valeur."%'";
+        $return = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        echo "<ul>";
+        foreach( $return as $ligne){
+        //print_r( $ligne);
+        echo '<li id="' .$ligne["ID_STY"] .'" class="liautocomplete" onclick="selectStyle(this.id)">'.$ligne["NAME_STY"]."</li>";
+        }
+        //return $return;
+        }
 }

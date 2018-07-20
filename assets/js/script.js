@@ -65,34 +65,45 @@ $(document).ready(function (){
     });
 });
 
-$('#styleBeer').on('keyup', function(){
+$('#style').on('keyup', function () {
+
     $.ajax({
-        type: 'GET',
-        url: 'search-style/' + this.value,
-        cache: false,
-        success: function(response){
-            autoCompleteSuccess(response, true);
-        },
-        error: function(xhr){
-            console.log(JSON.parse(xhr.responseText));
-        }
-
+    type: 'GET',
+    url: 'search-style/' + this.value,
+    cache: false,
+    success: function (response) {
+    //autoCompleteSuccess(response, true);
+    //alert(response);
+    $('#autocompletestyle').html(response);
+    //alert(JSON.parse(response));
+    },
+    error: function (xhr) {
+    console.log(JSON.parse(xhr.responseText));
+    }
+    
     });
-});
-
-//********** ajax pour autocomplétion **************
-$('#styleBeer').on('keyup', function () {
-    $.ajax({
-        type: 'GET',
-        url: 'search-style/' + this.value,
-        cache: false,
-        success: function (response) {
-            autoCompleteSuccess(response, true);
-        },
-        error: function (xhr) {
-            console.log(JSON.parse(xhr.responseText));
-        }
-
     });
-});
+    
+    function selectStyle(id) {
+    var selection = document.getElementById(id);
+    var champStyle = document.getElementById("style")
+    var listeStyle = document.getElementById("autocompletestyle")
+    alert(selection.innerText);
+    champStyle.value = selection.innerText;
+    listeStyle.style.display="none"
+    
+    }
+
+
+
+
+function backToTop() {
+    var screenWidth = $(window).width();
+
+    if (screenWidth < 1024) {
+        $('#back-to-top').addClass('show');
+    } else {
+        $('#back-to-top').removeClass('show');
+    }
+};
 
