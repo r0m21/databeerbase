@@ -46,10 +46,6 @@ html{font-size:62.5%;}
         /* Display and justify */
 
         .flex{display: flex;}
-        .flexdcolumn{ flex-direction:column;}
-        .flexaligncontcenter{ align-content: center;}
-        .flexalignitemcenter{ align-items: center;}
-        .flexaligncontentstart{ align-content:flex-start;}
         .iblock{display: inline-block;}
         .jcbetween{justify-content: space-between;}
         .jcaround{justify-content: space-around;}
@@ -149,6 +145,7 @@ html{font-size:62.5%;}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+        .minheight150p{min-height: 0;}
         .block-on-med-and-down{display: block;}
         .w100-mm{width:100%;}
         .h180p{height:0px;}        
@@ -182,6 +179,7 @@ html{font-size:62.5%;}
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+        .minheight150p{min-height: 0;}
         .block-on-med-and-down{display: block;}
         .w100-mm{width:100%;}
         .h180p{height:0px;}        
@@ -215,6 +213,7 @@ html{font-size:62.5%;}
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+        .minheight150p{min-height: 0;}
         .imgcarousel{
                 max-width: 640px;
                 max-height:210px;
