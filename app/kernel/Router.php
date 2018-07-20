@@ -30,7 +30,6 @@ class Router {
                 $result['action']       = 'infoBeer';
                 $result['params']['id'] = $parts[1];
             }
-
             else if($parts[0] == 'search-style' && count($parts) == 2){
                 $result['controller'] = 'Page';
                 $result['action'] = 'ajaxSearch';

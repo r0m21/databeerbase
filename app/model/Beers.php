@@ -87,13 +87,11 @@ public static function getCategories(){
 
 }
 
-// ******** recherche par degrés categories styles nom de bière **********
-
 // degBeer => degrés / nom => recherche bière / nationalite => nationalite des bières / styleBeer => style de bière
    
 public static function searchBeer($values) {
 
-        if(isset($_POST['submitForm'])){
+        if(isset($_GET['submitForm'])){
    
         $db = Database::getInstance();
         $sql = "SELECT * FROM beer as b
@@ -134,14 +132,15 @@ public static function searchBeer($values) {
 }
 
 public static function getAutoStyle($valeur){
-$db = Database::getInstance();
-
-$sql = "SELECT * FROM style WHERE name_STY LIKE '%".$valeur."%'";
-$return = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-
-return $return;
-}
-
-
-
+        $db = Database::getInstance();
+        
+        $sql = "SELECT * FROM style WHERE name_STY LIKE '%".$valeur."%'";
+        $return = $db->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+        echo "<ul>";
+        foreach( $return as $ligne){
+        //print_r( $ligne);
+        echo '<li id="' .$ligne["ID_STY"] .'" class="liautocomplete" onclick="selectStyle(this.id)">'.$ligne["NAME_STY"]."</li>";
+        }
+        //return $return;
+        }
 }

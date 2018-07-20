@@ -9,17 +9,21 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="./assets/css/nouislider.css" />
         <title>{% block title %}Chope ta bière !{% endblock %}</title>
     </head>
-    <body class="bgcolor1">
+    <body class="bgcolor1 relative">
         
         {% include 'Layout/header.html.twig' %}
 
         <main>
             {% block content %}{% endblock %}
+
+
+            <a href="#encre" id="back-to-top" title="Retour en haut"><i class="fas fa-arrow-alt-circle-up color2 fa-4x fixed buttonTop absolute "></i></a>
+
         </main>
 
         {% include 'Layout/footer.html.twig' %}
+        
     </body>
 </html>

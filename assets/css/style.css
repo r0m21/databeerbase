@@ -26,7 +26,7 @@ html{font-size:62.5%;}
         .color1{color:#F0F0EB;} /* gris clair */
         .color2{color:#f5b553;} /* jaune doré */
         .color3{color:#854836;} /* marron */
-        .color4{color:#fff;} /* blanc */
+        .color4{color:#fff; } /* blanc */
         .color5{color:#222222;} /* noir */
         .txt-decoration-none{text-decoration: none;}
         .color-inherit{color: inherit;}
@@ -46,11 +46,8 @@ html{font-size:62.5%;}
         /* Display and justify */
 
         .flex{display: flex;}
-        .flexdcolumn{ flex-direction:column;}
-        .flexaligncontcenter{ align-content: center;}
-        .flexalignitemcenter{ align-items: center;}
-        .flexaligncontentstart{ align-content:flex-start;}
         .iblock{display: inline-block;}
+        .flexdcolumn{ flex-direction:column;}
         .jcbetween{justify-content: space-between;}
         .jcaround{justify-content: space-around;}
         .jccenter{justify-content: center;}
@@ -61,7 +58,12 @@ html{font-size:62.5%;}
 
         .absolute{position:absolute;}
         .fixed{position:fixed;}
-
+        .relative{position: relative;}
+ 
+        .buttonTop{
+                bottom: 15%;
+                left: 90%
+        }
         
         .textjustify{text-align:justify;}
         .center{margin:auto;}
@@ -71,16 +73,20 @@ html{font-size:62.5%;}
 
         .mbot30p{margin-bottom:30px;}
         .mtop50p{margin-top:50px;}
+        .mtop40p{margin-top:40px;}
         .mtop30p{margin-top:30px;}
         .mtop20p{margin-top:20px;}
         .mtop15p{margin-top: 15px;}
+        .mtop10p{margin-top: 10px;}
         .mrightNeg100p{margin-right:-100px;}
         .mtopNeg30p{margin-top:-30px;}
         .mtopNeg20p{margin-top:-20px;}
         .mleft100p{margin-left:100px;}
+        .mleft35p{margin-left:35px;}
         .mleft30p{margin-left:30px;}
         .mleft10p{margin-left:10px;}
         .padding15p{padding:15px;}
+        .pt50p{padding-top:50px;}
 
 
 /* ------------- Heights ------------- */
@@ -88,8 +94,9 @@ html{font-size:62.5%;}
         .h300p{height:300px;}
         .h210p{height:210px;}
         .h180p{height:180px;}
-        .h100prc{height:100%;}
-        .h90prc{height:50%;}
+        
+
+        .minheight150p{min-height: 150px;}
 
         .lh210p{line-height: 210px;}
         .lh100p{line-height:100px;}
@@ -101,7 +108,7 @@ html{font-size:62.5%;}
         .w300p{width:300px;}
         .w150p{width:150px;}
         .w75p{width:75px;}
-        .w100prc{width:100%;}
+        
         
 
 /* ------------- Spécifiques ------------- */
@@ -129,8 +136,35 @@ html{font-size:62.5%;}
                 }
         i:hover{color:#f5b553;}
         
+        .row .col .input-field:first-child{
+                padding-left:0px;
+        }
 
+        #back-to-top:hover {
+                background: #e9ebec;
+            }
+        #back-to-top.show {
+                opacity: 1;
+            }
 
+        .row .col .input-field:nth-child(2){
+                padding-right:0px;
+        }
+
+        .listautocomplete{position:relative;top:0px;left:0px; width:auto; z-index:500; border:1px solid black;display:none;}
+
+        .liautocomplete{background-color:transparent;}
+
+        .liautocomplete:hover {background-color: #E2F6F6;}
+
+        
+        .waves-button-input{color:#fff;}
+        .btn:hover{background-color: #222;}
+
+        input[type=range]+.thumb{
+                background-color: #222;
+                color:#f5b553;
+        }
 
 /* ------------- Media queries ------------- */
 
@@ -145,16 +179,14 @@ html{font-size:62.5%;}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
-}
-
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
+        .minheight150p{min-height: 0;}
         .block-on-med-and-down{display: block;}
         .w100-mm{width:100%;}
         .h180p{height:0px;}        
         .mtop80-mm{margin-top:80px;}
         .mtop30-mm{margin-top:30px;}
+        .h56p-sm{height:56px;}
+        .lh56{line-height: 56px;}
         /* Annulation des classes appliquées au H1 en large-screen */
         .h1-mm{
                 display:block;
@@ -175,6 +207,43 @@ html{font-size:62.5%;}
                 background-color:white;
                 opacity:0.8;
                 width:100%;
+                z-index:999;
+                }
+        .fs32-mm{font-size:3.2rem;}
+        .fs24-mm{font-size:2.4rem;}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+        .minheight150p{min-height: 0;}
+        .block-on-med-and-down{display: block;}
+        .w100-mm{width:100%;}
+        .h180p{height:0px;}        
+        .mtop80-mm{margin-top:80px;}
+        .mtop30-mm{margin-top:30px;}
+        .h56p-sm{height:56px;}
+        .lh56{line-height: 56px;}
+        /* Annulation des classes appliquées au H1 en large-screen */
+        .h1-mm{
+                display:block;
+                margin:0;
+                font-size:4.6rem;
+                text-align: center;
+                writing-mode: horizontal-tb;
+                transform: rotate(0deg);
+                }
+        /* Placement de la nav en bottom fixed */
+        .navBottom{
+                position:fixed;
+                bottom:0;
+                left:50%;
+                transform:translateX(-50%);
+                display:inline-block;
+                line-height: 0px;
+                background-color:white;
+                opacity:0.8;
+                width:100%;
+                z-index:999;
                 }
         .fs32-mm{font-size:3.2rem;}
         .fs24-mm{font-size:2.4rem;}
@@ -182,6 +251,7 @@ html{font-size:62.5%;}
 
 /* Extra Small Devices, Phones */ 
 @media only screen and (max-width : 480px) {
+        .minheight150p{min-height: 0;}
         .imgcarousel{
                 max-width: 640px;
                 max-height:210px;
@@ -196,9 +266,12 @@ html{font-size:62.5%;}
                 background-color:white;
                 opacity:0.8;
                 width:100%;
+                z-index:999;
                 }
         .h300p{height:200px;}
         .h180p{height:0px;}
+        .h56p-sm{height:56px;}
+        .lh56{line-height: 56px;}
         .respHR{width:200px;}
         .w100-sm{width:100%;}
         .w605p{width:300px}
