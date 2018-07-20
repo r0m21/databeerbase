@@ -10,14 +10,14 @@
 
         <h1 class="rotated fs95 oswald mleft100p mrightNeg100p h1-sm h1-mm right-align"><span class="color2">R</span><span class="color5">ECHERCHE</span></h1>
         <div class="row">
-            <form action="" method="POST" class="col l11">
+            <form action="" method="GET" class="col l11">
 
                 <label for="nom" class="fs24 color5">Nom</label>
                 <input type="text" name="nom" id="nom">
 
                 <label for="style" class="fs24 color5">Style</label>
-                <input type="text" name="styleBeer" id="style">
-
+                <input type="text" class="autocomplete" name="styleBeer" id="styleBeer">
+                
                 <div class="col s12">
                     <select id="nationalite" class="fs24">
                         <option value="">Choisir une nationalité</option>
@@ -34,7 +34,7 @@
                     {% for s in search %}
                         <div class="card center-align col l4 ">
                             <h3 class="fs20 card-title textLimitSearch">{{ s.NAME_BEE }}</h3>
-                            <a href="info-beer/{{ beer.ID_BEE }}"><i class="fa fa-plus-circle fa-4x color2 mtop20p padding15p" aria-hidden="true"></i></a>
+                            <a href="info-beer/{{ s.ID_BEE }}"><i class="fa fa-plus-circle fa-4x color2 mtop20p padding15p" aria-hidden="true"></i></a>
                             <img src="{{ s.FILEPATH_BEE }}" alt="résultatBière" >
                         </div>
                     {% endfor %}

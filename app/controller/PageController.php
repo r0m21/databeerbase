@@ -4,7 +4,7 @@ class PageController extends Controller{
 
     public function searchBeer(){
 
-        $search = Beers::searchBeer($_POST);
+        $search = Beers::searchBeer($_GET);
         $option = Beers::getCategories();
    
 
@@ -40,5 +40,14 @@ class PageController extends Controller{
             'nationalite' => $nationalite,
 
         ));
+    }
+
+    public function ajaxSearch(){
+        $valeur = $this->route["params"]["valeur"];
+        $result = Beers::getAutoStyle($valeur);
+        $j_result = json_encode($result);
+
+        echo $j_result;
+
     }
 }
