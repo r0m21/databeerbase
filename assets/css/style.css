@@ -58,7 +58,12 @@ html{font-size:62.5%;}
 
         .absolute{position:absolute;}
         .fixed{position:fixed;}
-
+        .relative{position: relative;}
+ 
+        .buttonTop{
+                bottom: 10%;
+                left: 90%
+        }
         
         .textjustify{text-align:justify;}
         .center{margin:auto;}
