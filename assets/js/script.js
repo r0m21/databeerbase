@@ -31,7 +31,7 @@ $(document).ready(function ()
      var len=$(this).text().trim().length;
      if(len>27)
      {
-         $(this).text($(this).text().substr(0,25)+'...');
+         $(this).text($(this).text().substr(0,20)+'...');
      }
  });
 });
@@ -65,30 +65,29 @@ $(document).ready(function (){
     });
 });
 
-$('#style').on('keyup', function () {
+// ********** ajax pour autocomplétion **************
 
-    $.ajax({
-    type: 'GET',
-    url: 'search-style/' + this.value,
-    cache: false,
-    success: function (response) {
-    //autoCompleteSuccess(response, true);
-    //alert(response);
-    $('#autocompletestyle').html(response);
-    //alert(JSON.parse(response));
-    },
-    error: function (xhr) {
-    console.log(JSON.parse(xhr.responseText));
-    }
+$('#style').on('keyup', function () {
+if (this.value === "") { $('#autocompletestyle').hide(); return; }
+$.ajax({
+type: 'GET',
+url: 'search-style/' + this.value,
+cache: false,
+success: function (response) {
+$('#autocompletestyle').html(response);
+$('#autocompletestyle').slideDown("slow");
+},
+error: function (xhr) {
+console.log(JSON.parse(xhr.responseText));
+}
+
+});
+});
     
-    });
-    });
-    
-    function selectStyle(id) {
+function selectStyle(id) {
     var selection = document.getElementById(id);
     var champStyle = document.getElementById("style")
     var listeStyle = document.getElementById("autocompletestyle")
-    alert(selection.innerText);
     champStyle.value = selection.innerText;
     listeStyle.style.display="none"
     
@@ -107,13 +106,5 @@ $('#style').on('keyup', function () {
     });
 
 
- function backToTop() {
-    var screenWidth = $(window).width();
 
-    if (screenWidth < 1024) {
-        $('#back-to-top').addClass('show');
-    } else {
-        $('#back-to-top').removeClass('show');
-    }
-};
 
