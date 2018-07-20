@@ -94,10 +94,20 @@ $('#style').on('keyup', function () {
     
     }
 
+/*Smooth Scrolling*/
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 
 
-
-function backToTop() {
+ function backToTop() {
     var screenWidth = $(window).width();
 
     if (screenWidth < 1024) {
