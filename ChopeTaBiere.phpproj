@@ -82,7 +82,6 @@
     <Content Include="app\view\Page\infoBeer.html.twig" />
     <Content Include="app\view\Page\infos.html.twig" />
     <Content Include="app\view\Page\searchBeer.html.twig" />
-    <Content Include="assets\css\nouislider.css" />
     <Content Include="assets\img\icons\icon-bieres-01.png" />
     <Content Include="assets\img\img-404.jpg" />
     <Content Include="assets\img\logo-ctb-01.png" />
@@ -90,8 +89,8 @@
     <Content Include="assets\img\Mockup\mockup_beer_1.png" />
     <Content Include="assets\img\Mockup\mockup_beer_2.png" />
     <Content Include="assets\img\Mockup\mockup_beer_3.png" />
-    <Content Include="assets\js\nouislider.min.js" />
     <Content Include="Ressources\data_beer.sql" />
+    <Content Include="Ressources\data_beer.zip" />
     <Content Include="Ressources\maquette-ctb2.psd" />
     <Content Include="Ressources\maquette_ctb.ai" />
     <Content Include="Ressources\maquette_ctb.pdf" />

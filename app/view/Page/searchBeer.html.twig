@@ -16,7 +16,7 @@
                     <div class="flex col l12 m12 nopadding">
 
                         <div class="input-field col s12 l6 m6 nopadding">
-                            <label for="nom" class="fs24 color5">Nom</label>
+                            <label for="nom" class="fs32 color5">Nom</label>
                             <input type="text" name="nom" id="nom">
                         </div>
 
@@ -31,19 +31,20 @@
                     <div class="col s12 mleft30p flex flexdcolumn mtop40p">
 
                         <select id="nationalite" class="fs24">
-                            <option value="">Choisir une nationalité</option>
+                            <option value="" placeholer=""  >Choisir une nationalité</option>
                             {% for o in option %}
                                 <option value="{{ o.NAME_CAT }}">{{ o.NAME_CAT }}</option>
                             {% endfor %}
                         </select>  
 
                         <div class="range-field mtop40p">
+                            <label for="style" class="fs16 color5">Degré d'alcool</label>
                             <input type="range" min="0" max="40" name="degBeer"/>
                         </div>
                     </div>
 
                     <div class="flex jccenter col s12 mtop40p">
-                        <input class="btn waves-effect waves-light bgcolor2 color4" type="submit" name="submitForm" value="Rechercher">
+                        <input title="Lancer la recherche" class="btn waves-effect waves-light bgcolor2 color4" type="submit" name="submitForm" value="Rechercher">
                     </div>
 
                 </form> 
