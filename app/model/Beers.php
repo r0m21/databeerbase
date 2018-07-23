@@ -41,8 +41,8 @@ public static function getBeer($id) {
 public static function getStyle($id) {
 
         $db = Database::getInstance();
-        $sql = "SELECT name_STY FROM style AS S 
-                INNER JOIN beer AS B
+        $sql = "SELECT name_STY FROM style AS s 
+                INNER JOIN beer AS b
                 ON s.id_STY = b.style_BEE
                 AND b.id_BEE = :id
                ";
