@@ -7,8 +7,8 @@ mb_internal_encoding('UTF-8');
 date_default_timezone_set("Europe/Paris");
 header('Content-type: text/html; charset=utf-8');
 
-define('DB_DSN', 'mysql:dbname=jeromer_db;host=localhost');
-define('DB_USER', 'jeromer');
-define('DB_PASSWORD', 'DnZmmba6dQ');
+define('DB_DSN', 'mysql:dbname=databeerbase;host=localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
 
 require_once 'functions.common.php';
